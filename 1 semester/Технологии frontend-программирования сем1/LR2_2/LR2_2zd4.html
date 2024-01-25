@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 4</title>
+</head>
+<body>
+    <script>
+        x= new Number ('127.18');
+        y= new Number ('32');
+            x1=x.toExponential(3);
+            y1=y.toExponential(3);
+            x2=x.toString(2);
+            y2=y.toString(16);
+            x3=x.toPrecision(6);
+            y3=y.toPrecision(4);
+            x4=x.toFixed(1);
+            y4=y.toFixed(1);
+            document.write ('<table border=3px align=center> <tr bgcolor=#808080><th>Число</th> <th>Метод</th> <th>Результат</th> <th>Описание</th></tr>');
+                document.write ('<tr align=center><td>' + x + '</td><td>' + 'toExponental(3)' + '</td><td>' + x1 + '</td><td rowspan=2>' + 'Представляет число в экспоненциальной форме с 3 знаками после запятой.' + '</td></tr>');
+                document.write ('<tr align=center><td>' + y + '</td><td>' + 'toExponental(3)' + '</td><td>' + y1 + '</td></tr>');
+                document.write ('<tr align=center><td>' + x + '</td><td>' + 'toString(2)' + '</td><td>' + x2 + '</td><td>' + 'Строковое представление числа в 2-ичной системе счисления.' + '</td></tr>');
+                document.write ('<tr align=center><td>' + y + '</td><td>' + 'toString(16)' + '</td><td>' + y2 + '</td><td>' + 'Строковое представление числа в 16-ричной системе счисления' + '</td></tr>');
+                document.write ('<tr align=center><td>' + x + '</td><td>' + 'toPrecision(6)' + '</td><td>' + x3 + '</td><td>' + 'Представляет число с общим количеством значащих цифр-6.' + '</td></tr>');
+                document.write ('<tr align=center><td>' + y + '</td><td>' + 'toPrecision(4)' + '</td><td>' + y3 + '</td><td>' + 'Представляет число с общим количеством значащих цифр-4' + '</td></tr>');
+                document.write ('<tr align=center><td>' + x + '</td><td>' + 'toFixed(1)' + '</td><td>' + x4 + '</td><td rowspan=2>' + 'Представляет число в форме с количеством цифр после точки-1' + '</td></tr>');
+                document.write ('<tr align=center><td>' + y + '</td><td>' + 'toFixed(1)' + '</td><td>' + y4 + '</td></tr>');
+            document.write('</table>');
+    </script>
+</body>
+</html>

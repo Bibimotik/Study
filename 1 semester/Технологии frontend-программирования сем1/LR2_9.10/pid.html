@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+  padding: 0 1em;
+  tab-size: 2;
+  font: 80%/1.4 Consolas, Monaco, monospace;
+}
+    </style>
+</head>
+<body>
+    <pre id="output"></pre>
+    <script>
+        let style = document.body.style;
+let properties = Object.getOwnPropertyNames(style.hasOwnProperty("background")? style : style.__proto__);
+
+properties = properties.filter(p => style[p] === "") // drop functions etc
+  .map(prop => { // de-camelCase
+    prop = prop.replace(/[A-Z]/g, function($0) { return '-' + $0.toLowerCase() });
+
+    if (prop.startsWith("webkit-")) {
+      prop = "-" + prop;
+    }
+
+    return prop;
+  });
+
+// Drop duplicates
+properties = [...new Set(properties)];
+
+output.textContent = JSON.stringify(properties, null, "\t");
+    </script>
+</body>
+</html>

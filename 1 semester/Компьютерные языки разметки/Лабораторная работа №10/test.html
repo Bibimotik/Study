@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <style>
+        body {
+            justify-content:space-between;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        h2 {
+            flex-basis:100%;
+            text-align: center;
+            border: 2px solid black;
+            margin:0;
+        }
+        p {
+            font-size: 23px;
+            flex-basis: 25%;
+            text-align: left;
+            border: 2px solid black;
+        }
+        .p1 {
+            flex-basis: 40%;
+        }
+        nav{
+            text-align:center;
+            flex-basis:100%;
+        }
+        ul {
+            
+            right:0px;
+            top:10px;
+            margin-top: 5px;
+            padding: 0;
+
+            list-style-type: none;
+        }
+        li{
+            border:  2px solid black;
+            display:inline;
+            margin: 3px 0 0 0;
+        }
+        video{
+            padding: 10px;
+            /* height:100px; */
+            width: 260px;
+            height: 150px;
+        }
+        audio{
+            padding: 10px;
+
+            display:block;
+        }
+        label{
+            display:none;
+        }
+        input{
+            display:none;
+        }
+        a {
+            display:inline-block;
+            text-decoration: none;
+            color: black;
+        }
+        a:visited{
+            color:black;
+        }
+        @media(max-width:700px) {
+            ul{
+                position:static;
+            }
+            li{
+                display:block;
+            }
+            body {
+                justify-content: space-between;
+                display: flex;
+                flex-flow: column wrap;
+            }
+            p{
+                margin: 10px 0 0 0;
+            }
+            label {
+                display:block;
+                position: absolute;
+                right: 20px;
+                font-size:27px;
+            }
+            input {
+                display:block;
+                position: absolute;
+                right: 20px;
+                top: 14px;
+                opacity:0;
+            }
+            nav{
+                display:none;
+            }
+            input:checked ~ nav{
+                display:block;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>КЯР </h2>
+
+    <label>&#8801;</label>
+    <input type="checkbox" id="gamb" />
+
+    <nav>
+        <ul>
+            <li><a href="#one">Destination</a></li>
+            <li><a href="#two">Give Me A Kiss</a></li>
+            <li><a href="#three">Caroline</a></li>
+        </ul>
+    </nav> 
+    <p id="one">
+        <video muted="muted" controls loop src="Crash Adams - Destination (Official Lyric Video).mp4"></video>
+        <video muted="muted" controls loop src="Crash Adams - Give Me A Kiss (Official Lyric Video).mp4"></video>
+        <video muted="muted" controls loop src="Crash Adams - Caroline (Acoustic Version).mp4"></video>
+    </p>
+    <p class="p1" id="two">
+        Flex это новая технология, которая уже имеет достаточно широкую поддержку браузеров.
+        Flexbox предоставляет инструменты для быстрого создания сложных, гибких макетов, и функции, которые были сложны в традиционных методах CSS.
+        Долгое время единственными надёжными инструментами CSS вёрстки были такие способы как Float (обтекание) и позиционирование.
+    </p>
+    <p id="three">
+        <audio controls src="Crash-Adams-Destination.mp3"></audio>
+        <audio controls src="Crash Adams - Give Me A Kiss.mp3"></audio>
+        <audio controls src="Crash Adams Caroline Lyrics.mp3"></audio>
+    </p>
+</body>
+</html>

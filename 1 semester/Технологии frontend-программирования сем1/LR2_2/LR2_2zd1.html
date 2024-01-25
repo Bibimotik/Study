@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №2</title>
+</head>
+<body>
+    <input type='button' value="One" onclick="One()"><br>
+    <input type='button' value="Two" onclick="Two()"><br>
+    <input type='button' value="Three" onclick="Three()"><br>
+    <input type='button' value="Four" onclick="Four()"><br>
+    <input type='button' value="Five" onclick="Five()"><br>
+    <input type='button' value="FiveDop" onclick="FiveDop()"><br>
+    <input type='button' value="Six" onclick="Six()"><br>
+    <input type='button' value="Seven" onclick="Seven()"><br>
+    <input type='button' value="Eight" onclick="Eight()"><br>
+    <script type="text/javascript">
+        var One=() => {
+            alert('Вас приветствует учебный центр');
+            name=prompt('Введите имя:', 'Имя');
+            alert('Добро пожаловать на наши курсы,'+name);
+            x=confirm('Хотите стать Web-дизайнером?');
+            if (x) alert('Учите стили CSS и JavaScript!');
+            else alert('Упускаете время!');
+        }
+        var Two=() => {
+            let n1=10+5;
+                console.log(n1);
+            let n2='10'+'5';
+                console.log(n2);
+            let n3=22+'5';
+                document.write(n3+ '<br>');
+            let n4='22'+5;
+                document.write(n4);
+            alert('Результатом сложения строки и числа всегда будет строка');
+        }
+        function Three() {
+            x=prompt('Введите число x:');
+            y=prompt('Введите число y:');
+            q=(35*y-25*x)/5+232;
+            e=(8*y/x+5*x/y-43)*6;
+            document.write(q%e);
+            alert(q%e);
+        }
+        function Four() {
+            x=prompt('Введите число:');
+            if ((x<20) && (x!=15) && (x%5 ==0) || (x>40) && (x%5 ==0))
+            alert('Правильное значение!');
+            else alert('Не правильное значение!');
+            y=prompt('Введите час когда вы хотите посетить наш магазин:');
+            if ((y>=8) && (y!=13) && (y!=14) && (y<=22))
+            alert('Мы открыты иждем Вас!');
+            else if ((y>24) && (y<1))
+            alert('К сожалению Вы ввели неверное время(');
+            else alert('Мы закрыты в это время.');
+        }
+        function Five() {
+            a=prompt('Введите число А');
+            b=prompt('Введите число Б');
+            if (a>b) document.write('А больше Б');
+            else if (a<b) document.write('А меньше Б');
+            else document.write('А равно Б');
+        }
+        function FiveDop() {
+            x=prompt('Который час?');
+            if ((x>=12) && (x<=16)) document.write('Приятного обеда!');
+            else if ((x>=6) && (x<12)) document.write('Приятного завтрака!');
+            else if ((x>16) && (x<=22)) document.write('Приятного ужина!');
+            else document.write('Неверные данные!');
+        }
+        function Six() {
+            let date= new Date();
+            let day=date.getDay();
+            let x=day;
+            switch (x) {
+                case 1: alert('Понедельник'); 
+                    break;
+                case 2: alert('Вторник'); 
+                    break;
+                case 3: alert('Среда'); 
+                    break;
+                case 4: alert('Четверг'); 
+                    break;
+                case 5: alert('Пятница'); 
+                    break;
+                case 6: alert('Суббота');
+                    break;
+                case 0: alert('Воскресение');
+                    break;
+            }
+        }
+        function Seven() {
+            let x=0b1111110;
+            let y=0o0557;
+            let z=0x0310;
+            alert('x='+ x);
+            alert('y='+ y);
+            alert('z='+ z);
+        }
+        function Eight() {
+            try {
+                x=prompt('Введите вашу отметку:');
+                if ((y>=0) && (x<=10));
+                alert('Правильно');
+            } catch(err) {
+                if ((x<0) && (x>10));
+                alert('Введены неверные данные!');
+                alert(err.message);
+            }
+        }
+    </script>
+</body>
+</html>

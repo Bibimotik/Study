@@ -1,0 +1,19 @@
+students{
+    display: table;
+    border-collapse: collapse;
+    margin: 10px;
+}
+student, example{
+    display: table-row;
+}
+euniversity, ename, esurname, eage{
+    background-color: rgb(180, 177, 177);
+    display: table-cell;
+    border: 1px solid black;
+    padding:10px;
+}
+university, name, surname, age{
+    display: table-cell;
+    border: 1px solid black;
+    padding:10px;
+}

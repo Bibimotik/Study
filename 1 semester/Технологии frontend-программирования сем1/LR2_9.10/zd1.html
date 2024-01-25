@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zd1</title>
+    <style>
+        p
+        {
+            width: 250px;
+            height: 250px;
+            text-align: justify;
+        }
+        img
+        {
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="p1">Привет</textarea>
+    <img src="cat2.png" id="img1">
+    <script>
+        var img1 = document.getElementById('img1');
+        img1.onmousedown = function(e) 
+        {
+            //разместить на том же месте, но в абсолютных координатах
+            img1.style.position = 'absolute';
+            moveAt(e);
+            // показывать над другими элементами
+            img1.style.zIndex = 1000;
+            // передвинуть под координаты курсора
+            // и сдвинуть на половину ширины/высоты для центрирования
+            function moveAt(e)
+            {
+                img1.style.left = e.pageX - img1.offsetWidth / 2 + 'px';
+                img1.style.top = e.pageY - img1.offsetHeight / 2 + 'px';
+            }
+            //перемещение
+            document.onmousemove = function(e)
+            {
+                moveAt(e);
+            }
+            //окончание переноса
+            img1.onmouseup = function(e)
+            {
+                document.onmousemove = null;
+                img1.onmouseup = null;
+            }
+        }
+        //чтобы картинка не бралась во время переноса
+        img1.ondragstart = function()
+        {
+            return false;
+        }
+
+        var p1 = document.getElementById('p1');
+        p1.onmousedown = function(e) 
+        {
+            //разместить на том же месте, но в абсолютных координатах
+            p1.style.position = 'absolute';
+            moveAt(e);
+            // показывать над другими элементами
+            p1.style.zIndex = 1000;
+            // передвинуть под координаты курсора
+            // и сдвинуть на половину ширины/высоты для центрирования
+            function moveAt(e)
+            {
+                p1.style.left = e.pageX - p1.offsetWidth / 2 + 'px';
+                p1.style.top = e.pageY - p1.offsetHeight / 2 + 'px';
+            }
+            //перемещение
+            document.onmousemove = function(e)
+            {
+                moveAt(e);
+            }
+            //окончание переноса
+            p1.onmouseup = function(e)
+            {
+                document.onmousemove = null;
+                img1.onmouseup = null;
+            }
+        }
+        //чтобы картинка не бралась во время переноса
+        p1.ondragstart = function()
+        {
+            return false;
+        }
+    </script>
+</body>
+</html>

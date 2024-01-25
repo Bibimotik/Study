@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zd3</title>
+</head>
+<body>
+    <script>
+        var arr = [',', ';', '^', '?', '/', '$', '&', '%'];
+        var arr1 = ['=', '+', '-', '_', '(', ')', '#', '!'];
+        var arr2 = ['№', '@', '~', '`', ':', '|', '', '%'];
+        var symbol = prompt("Введите символ: ");
+        document.write("Принадлежит ли символ первому массиву: " + arr.includes(symbol) + "<br>");
+        document.write("Второму: " + arr1.includes(symbol) + "<br>");
+        document.write("Третьему: " + arr2.includes(symbol) + "<br>");
+    </script>
+</body>
+</html>

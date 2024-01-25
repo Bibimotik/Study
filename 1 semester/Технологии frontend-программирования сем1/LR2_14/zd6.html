@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zd6</title>
+</head>
+<body>
+    <script>
+        var Georgia = {};
+        Object.defineProperty(Georgia, 'city1', {
+            value: 'Batumi',
+            enumerable: true, //свойство перечислимо
+            configurable: true //можно изменять и удалять свойство
+        });
+        Object.defineProperty(Georgia, 'city2', {
+            value: 'Tbilisi',
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+        console.log(Georgia);
+        console.log(Object.getOwnPropertyDescriptor(Georgia, 'city1'));
+        console.log(Object.getOwnPropertyDescriptor(Georgia, 'city2'));
+
+    </script>
+</body>
+</html>

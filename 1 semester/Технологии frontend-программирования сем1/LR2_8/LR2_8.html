@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR2_8</title>
+    <style>
+        span
+        {
+            font-size: 16px;
+        }
+        p
+        {
+            text-align: justify;
+            font-size: 16px;
+        }
+        img 
+        {
+            width: 200px;
+            height: 200px;
+        }
+        .p1
+        {
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Sublime Text can now utilize your GPU on Linux, Mac and Windows when rendering the interface.
+        This results in a fluid UI all the way up to 8K resolutions, all while using less power than before.
+        Sublime Text for Mac now includes native support for <span id="span1">Apple Silicon</span> processors.
+        Linux ARM64 builds are also available for devices like the Raspberry Pi.
+    </p>
+    <p>
+        File tabs have been enhanced to make split views effortless, with support throughout the interface and built-in commands.
+        The side bar, tab bar, <span id="span2">Goto Anything</span>, Goto Definition, auto complete and more have all been tweaked to make code navigation easier and more intuitive than ever.
+        The auto complete engine has been rewritten to provide smart completions based on existing code in a project.
+        Suggestions are also augmented with info about their kind, and provide links to definitions.
+    </p>
+    <img src="cat2.png" id="img1">
+    <p class="p1" id="p1">
+        The Default and Adaptive themes have been refreshed with new tab styles and inactive pane dimming.
+        Themes and Color Schemes support auto dark-mode switching.
+        The Adaptive theme on Windows and Linux now features custom title bars.
+        Support for one of the most popular new programming languages is now shipped by default.
+        Utilize all of the smart syntax-based features of Sublime Text within the modern JavaScript ecosystem.  
+    </p>
+    <img src="cat3.png" id="img2">
+
+    <script>
+        //задание 1
+        const span1 = document.getElementById("span1");
+        span1.onmouseover = function()
+        {
+            this.style.color = 'red';
+        }
+        span1.onmouseout = function()
+        {
+            this.style.color = '';
+        }
+        //задание 2
+        const span2 = document.getElementById("span2");
+        span2.onclick = function()
+        {
+            span2.style.fontSize = "29px";
+        }
+        //задание 3
+        const img1 = document.getElementById("img1");
+        img1.onclick = function()
+        {
+            if (img1.src.indexOf('cat2.png')>0)
+            {
+                img1.src = 'cat3.png';
+            }
+            else
+            {
+                img1.src = 'cat2.png';
+            }
+        }
+        //задание 4
+        const p1 = document.getElementById("p1");
+        p1.onclick = function()
+        {
+            p1.innerHTML = '<img src="cat3.png">';
+        }
+        //задание 5
+        const img2 = document.getElementById("img2");
+        img2.onmouseover = function()
+        {
+            this.style.width = '400px';
+        }
+        img2.onmouseout = function()
+        {
+            this.style.width = '';
+        }
+        //задание 6
+        const img3 = document.getElementById("img2")
+        img3.ondblclick = function()
+        {
+            this.style.border = '5px solid purple';
+        }
+    </script>
+</body>
+</html>

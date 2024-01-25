@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zd1</title>
+</head>
+<body>
+    <script>
+        var x = prompt("Введите ключ-зачение");
+        x = Number(x);
+        var map = new Map();
+        map.set(1, "str1");
+        map.set(2, "str2");
+        map.set(3, "str3");
+        map.set(4, "str4");
+        map.set(5, "str5");
+        //асс. массивы повторить
+        switch(x)
+        {
+            case 1: alert(map.get(1));
+            break;
+            case 2: alert(map.get(2));
+            break;
+            case 3: alert(map.get(3));
+            break;
+            case 4: alert(map.get(4));
+            break;
+            case 5: alert(map.get(5));
+            break;
+            default: alert("Нет такого номера!");
+        }
+    </script>
+</body>
+</html>

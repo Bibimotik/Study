@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="zd2.xsl"?>
+<class>
+    <student>
+        <name>Михаил</name>
+        <sname>Банкузов</sname>
+        <math>7</math>
+        <english>9</english>
+        
+    </student>
+    <student>
+        <name>Максим</name>
+        <sname>Плеско</sname>
+        <math>2</math>
+        <english>7</english>
+        
+    </student>
+    <student>
+        <name>Денис</name>
+        <sname>Дмуховский</sname>
+        <math>7</math>
+        <english>9</english>
+       
+    </student>
+    <student>
+        <name>Андрей</name>
+        <sname>Тычко</sname>
+        <math>9</math>
+        <english>8</english>
+        
+    </student>
+</class>

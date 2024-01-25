@@ -1,0 +1,354 @@
+img
+{
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+/*задание 1*/
+.cat1:hover
+{
+    transform: scale(0.5);
+}
+
+.cat2:hover
+{
+    transform: rotate(45deg);
+}
+
+.cat3:hover
+{
+    transform: translate(60px, 0px);
+}
+
+.cat4:hover
+{
+    transform: skew(-20deg);
+}
+/*задание 2*/
+.cat5
+{
+    transform: perspective(100px) rotateX(30deg);
+}
+
+.cat6
+{
+    transform: perspective(100px) rotateY(10deg);
+}
+
+.cat7
+{
+    transform: perspective(100px) rotateX(10deg);
+}
+
+.cat8
+{
+    transform: perspective(100px) rotateY(-10deg);
+}
+/*задание 3*/
+button
+{
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 123px;
+    height: 30px;
+    margin-left: 61px;
+    margin-right: 61px;
+}
+
+.button1:hover
+{
+    background-color: black;
+    color: white;
+}
+
+.button2:hover
+{
+    background-color: white;
+    border: 4px solid red;
+    outline: 4px solid yellow;
+}
+
+.button3:hover
+{
+    border: none;
+    background-color: white;
+    border-top: 4px solid green;
+    border-bottom: 4px solid green;
+}
+
+.button4:hover
+{
+    border: none;
+    background-color: white;
+    border-left: 4px solid blue;
+    border-right: 4px solid blue;
+}
+
+.button5:hover
+{
+    border: none;
+    background: radial-gradient(yellow 1%,rgb(255, 0, 255) 30%,rgb(106, 225, 255) 70%);
+}
+/*задание 4*/
+.catt, .catt2, .catt3, .catt4
+{
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes catanim1
+{
+    0% {transform: rotateY(60deg);}
+    50% {transform: rotateY(0deg);}
+    100% {transform: translate(0px);}  
+}
+
+@keyframes catanim2
+{
+    0% {transform: rotateY(60deg);}
+    50% {transform: rotateY(0deg);}
+    100% {transform: translate(180px); filter:blur(10px);}
+}
+
+@keyframes catanim3
+{
+    0% {transform: rotateY(60deg);}
+    50% {transform: rotateY(0deg);}
+    100% {transform: translate(360px); filter: grayscale(1);}
+}
+@keyframes catanim4
+{
+    0% {transform: rotateY(60deg);}
+    50% {transform: rotateY(0deg);}
+    100% {transform: translate(540px); filter:invert(1);}
+}
+
+.catt
+{
+    right: 0px;
+    z-index: 1;
+    animation-name: catanim1;
+}
+
+.catt2
+{
+    right: 180px;
+    z-index: 2;
+    animation-name: catanim2;
+}
+
+.catt3
+{
+    right: 360px;
+    z-index: 3;
+    animation-name: catanim3;
+}
+
+.catt4
+{
+    right: 540px;
+    z-index: 4;
+    animation-name: catanim4;
+}
+/*задание 5*/
+@keyframes anim4 
+{
+    0% {opacity: 0;}
+    25% {opacity: 0.8;}
+    50% {opacity: 0.8;}
+    75% {opacity: 0;}
+    100% {opacity: 0;}
+}
+  
+@keyframes anim5 
+{
+    0% {opacity: 0;}
+    50% {opacity: 0.8;}
+    100% {opacity: 0;}
+}
+
+@keyframes anim6
+{
+  0% {opacity: 100;}
+  50% {opacity:50;}
+  100% {opacity: 0;}
+}
+
+@keyframes anim 
+{
+  0% {opacity: 0;}
+  25% {opacity: 1;}
+  50% {opacity: 1;}
+  75% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+.anim5 img
+{ 
+    left: 0;
+    right: 0;
+    opacity: 0;
+    animation-name: anim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    margin-left: 20px;
+}
+
+.cattt 
+{
+    position: absolute;
+    animation-delay: 2s;
+}
+
+.cattt2
+{
+    position: absolute;
+    animation-delay: 4s;
+}
+
+.cattt3 
+{
+    position: absolute;
+    animation-delay: 6s;
+}
+
+.cattt4 
+{
+    animation-delay: 8s;
+}
+
+@keyframes anim2 
+{
+  0% {opacity: 0;}
+  50% {opacity: 0.8;}
+  100% {opacity: 0;}
+}
+
+@keyframes anim 
+{
+    0% {opacity: 0;}
+    25% {opacity: 1;}
+    50% {opacity: 1;}
+    75% {opacity: 0;}
+    100% {opacity: 0;}
+}
+/*задание 6*/
+.cat16
+{
+    animation: aanim1 5s linear infinite;
+}
+
+.verta
+{
+    position: relative;
+    margin-bottom: 50px;
+    height: 2500px;
+    width: 400px;
+}
+
+.cat26
+{
+    animation: aanim2 5s linear infinite;
+}
+
+.cat36
+{
+    transform: translate(0px, 300px);
+    animation: aanim3 5s linear infinite;
+    position: absolute;
+}
+
+@keyframes aanim3
+{
+    from {transform: translate(0px, 720px);left: -570px;}
+    to {transform: translate(0px, 720px);left: 1300px;}
+}
+
+.cat46
+{
+    transform: translate(0px, 1080px);
+    animation: aanim4 5s linear infinite;
+    position: absolute;
+}
+
+.cat56
+{
+    animation: aanim5 5s linear infinite;
+    margin-top: 20px;
+    position: absolute;    
+}
+
+@keyframes aanim1
+{
+    0%{ }
+    100%{transform: translate(200px);}
+}
+
+@keyframes aanim2
+{
+    0%{ }
+    100%{transform: translateX(200px) skew(40deg);}
+}
+  
+@keyframes aanim4
+{
+    from {transform: translate(0px, 900px);}
+    to {transform: translate(0px, 1050px);}
+}
+
+@keyframes aanim5
+{
+    0% {left: 0px;top: 1710px;}
+    25% {left: 300px;top: 1710px;}
+    50% {left: 300px;top: 2010px;}
+    75% {left: 0px;top: 2010px;}
+    100% {left: 0px;top: 1710px;}
+}
+
+/*задание 7*/
+p
+{
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(230deg, #10c030, #11ffef);
+    animation: animy1 5s linear infinite;
+    text-indent: 10px;
+    text-align: justify;
+    overflow: hidden;
+}
+  
+p:hover 
+{
+    background: linear-gradient(230deg, pink, orange);
+}
+  
+@keyframes animy1
+{
+    0% {color: black;}
+    35% {color: red;}
+    65% {color: green;}
+    100% {color: blue;}
+}
+/*задание 8*/
+h3
+{
+    position: absolte;
+    text-align: left;
+    animation: anim 5s linear infinite;
+    text-indent: 120px;
+}
+
+@keyframes animу
+{
+    0% {opacity: 0;}
+    50% {opacity: 0.8;}
+    100% {opacity: 0;}
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zd6</title>
+</head>
+<body>
+    <button>0</button>
+    <button>0</button>
+    <button>0</button>  
+    <script>
+        var point = function()
+        {
+	        let k = 1;
+	        return function()
+            {
+		        this.innerHTML = k;
+		        return k++;
+	        }
+        }
+        var but = document.getElementsByTagName('button');
+        for (let i = 0; i < but.length; i++)
+        {
+	        but[i].addEventListener('click', point(this));
+        }
+    </script>
+</body>
+</html>

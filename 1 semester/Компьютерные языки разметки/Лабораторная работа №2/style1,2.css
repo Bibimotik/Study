@@ -1,0 +1,64 @@
+* {
+    background-color: #a5a5a5;
+}
+/*1 задание*/
+h1, h2, h3 {
+    color: blueviolet;
+    font-family: Monotype Corsiva;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: left;
+}
+/*2 задание*/
+.firstP {
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18pt;
+}
+.secondP {
+    color: yellow;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+}
+.thirdP {
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22pt;
+}
+.fourthP {
+    color: blue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24pt;
+}
+span {
+    color: #990000;
+}
+table {
+    border: 1px solid black;
+}
+td, th {
+    border: 1px solid black;
+}
+th {
+    background-color: #808080;
+}
+td {
+    background-color: #CCFFCC;
+}
+/*3 задание*/
+table {
+    border: 1px solid black;
+    width: 600px;
+}
+td, th {
+    border: 1px solid black;
+}
+table td {
+    color: blue;
+}
+table th {
+    color: red;
+}

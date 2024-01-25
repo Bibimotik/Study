@@ -1,0 +1,25 @@
+h1,h2,h3,h4,h5,h6 {
+color:purple;
+font-family:"Monotype Corsiva";
+}
+.list1{
+    color:red;
+    font-size: 18pt;
+    font-family: "Times New Roman";
+}
+.list2{
+    color:yellow;
+    font-size: 20pt;
+    font-family: "Times New Roman";
+}
+.list3{
+    color:green;
+    font-size: 22pt;
+    font-family: "Times New Roman";
+}
+table th {
+   color:aquamarine; 
+}
+table td {
+    color:aquamarine; 
+ }

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zd5</title>
+    <style>
+        form
+        {
+            width: 300px;
+            background-color: black;
+            color: white;
+        }
+        canvas
+        {
+            margin-top: 20px;
+            margin-left: 20px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <form class="form1">
+        <label>Выберите тип графика:</label><br>
+            <label><input type="radio" name="fun" id="f1" value="1">y=x^2</label><br>
+            <label><input type="radio" name="fun" id="f2" value="2">y=x^3</label><br>
+            <label><input type="radio" name="fun" id="f3" value="3">y=sin(x)</label><br>
+            <label><input type="radio" name="fun" id="f4" value="4">y=cos(x)</label><br><br>
+        <label>Выберите цвет графика:</label><br>
+            <label><input type="radio" name="col" value="5">black</label><br>
+            <label><input type="radio" name="col" value="6">green</label><br>
+            <label><input type="radio" name="col" value="7">yellow</label><br>
+            <label><input type="radio" name="col" value="8">red</label><br><br>
+        <input type="button" value="Напечатать" id="buttonPrint">
+    </form>
+    <canvas id="canvas1"></canvas>
+    <script>
+        const buttonPrint = document.getElementById('buttonPrint');
+        buttonPrint.onclick = function()
+        {
+            function osn()
+            {
+                let canvas = document.getElementById("canvas1");
+                let osn = canvas.getContext("2d");
+            
+                canvas.width = 500;
+                canvas.height = 500;
+                //система
+                osn.beginPath();
+                osn.moveTo(0, 250);
+                osn.lineTo(500, 250);
+                osn.lineTo(495, 245);
+                osn.lineTo(495, 255);
+                osn.lineTo(500, 250);
+                osn.moveTo(250, 500);
+                osn.lineTo(250, 0);
+                osn.lineTo(245, 5);
+                osn.lineTo(255, 5);
+                osn.lineTo(250, 0);
+                //x, y
+                //x
+                osn.moveTo(230, 0);
+                osn.lineTo(235, 5);
+                osn.moveTo(240, 0);
+                osn.lineTo(230, 10);
+                //y
+                osn.moveTo(490, 260);
+                osn.lineTo(500, 270);
+                osn.moveTo(500, 260);
+                osn.lineTo(490, 270);
+                osn.stroke();
+            }
+            //разметка
+            function ras()
+            {
+                let canvas = document.getElementById("canvas1");
+                let ras = canvas.getContext("2d");
+
+                ras.beginPath();
+                //по x
+                ras.moveTo(62.5, 245);
+                ras.lineTo(62.5, 255);
+                ras.moveTo(125, 245);
+                ras.lineTo(125, 255);
+                ras.moveTo(187.5, 245);
+                ras.lineTo(187.5, 255);
+                ras.moveTo(312.5, 245);
+                ras.lineTo(312.5, 255);
+                ras.moveTo(375, 245);
+                ras.lineTo(375, 255);
+                ras.moveTo(437.5, 245);
+                ras.lineTo(437.5, 255);
+                //по y
+                ras.moveTo(245, 200);
+                ras.lineTo(255, 200);
+                ras.moveTo(245, 300);
+                ras.lineTo(255, 300);
+                ras.stroke();
+            }
+            //график x^2
+            function x2(color)
+            {
+                let canvas = document.getElementById("canvas1");
+                let x2 = canvas.getContext("2d");
+
+                x2.beginPath();
+                x2.strokeStyle = color;
+                x2.moveTo(125, 0);
+                x2.quadraticCurveTo(250, 500, 375, 0);
+                x2.stroke();
+            }
+            //график x^3
+            function x3(color2)
+            {
+                let canvas = document.getElementById("canvas1");
+                let x3 = canvas.getContext("2d");
+
+                x3.beginPath();
+                x3.strokeStyle = color2;
+                x3.moveTo(0, 500);
+                x3.bezierCurveTo(312.5, 500, 187.5, 0, 500, 0);
+                x3.stroke();
+            }
+            //график sin(x)
+            function sin(color3)
+            {
+                let canvas = document.getElementById("canvas1");
+                let sin = canvas.getContext("2d");
+
+                sin.beginPath();
+                sin.strokeStyle = color3;
+                sin.moveTo(250, 250);
+                sin.quadraticCurveTo(312.5, 150, 375, 250);
+                sin.quadraticCurveTo(437.5, 350, 500, 250);
+                sin.moveTo(250, 250);
+                sin.quadraticCurveTo(187.5, 350, 125, 250);
+                sin.quadraticCurveTo(62.5, 150, 0, 250);
+                sin.stroke();
+            }
+            //график cos(x)
+            function cos(color4)
+            {
+                let canvas = document.getElementById("canvas1");
+                let cos = canvas.getContext("2d");
+
+                cos.beginPath();
+                cos.strokeStyle = color4;
+                cos.moveTo(187.5, 250);
+                cos.quadraticCurveTo(250, 150, 312.5, 250);
+                cos.quadraticCurveTo(375, 350, 437.5, 250);
+                cos.quadraticCurveTo(500, 150, 562.5, 250);
+                cos.moveTo(187.5, 250);
+                cos.quadraticCurveTo(125, 350, 62.5, 250);                
+                cos.quadraticCurveTo(0, 150, -62.5, 250);                
+                cos.stroke();
+            }
+            //рисунок графика и цвет
+            let arr1 = [];
+            let arr = [];
+            //цвет
+            for (let i = 4; i<8; i++)
+            {
+                col = document.forms[0].elements[i];
+                if(col.checked != true)
+                {
+
+                }
+                else
+                {
+                    pro = document.forms[0].elements[i].value;
+                    arr1 += pro;
+                    console.log(arr1[0]);
+                }
+            }
+            for (let i = 0; i<4; i++)
+            {
+                qwe = document.forms[0].elements[i];
+                if(qwe.checked != true)
+                {
+
+                }
+                else
+                {
+                    rty = document.forms[0].elements[i].value;
+                    arr += rty;
+                    console.log(arr[0]);
+                    if(arr[0]==1)
+                    {
+                        osn();
+                        if(arr1[0]==5)
+                        {
+                            x2("black");
+                        }
+                        else if(arr1[0]==6)
+                        {
+                            x2("green");
+                        }
+                        else if(arr1[0]==7)
+                        {
+                            x2("yellow");
+                        }
+                        else
+                        {
+                            x2("red");
+                        }
+                    }
+                    else if(arr[0]==2)
+                    {
+                        osn();
+                        if(arr1[0]==5)
+                        {
+                            x3("black");
+                        }
+                        else if(arr1[0]==6)
+                        {
+                            x3("green");
+                        }
+                        else if(arr1[0]==7)
+                        {
+                            x3("yellow");
+                        }
+                        else
+                        {
+                            x3("red");
+                        }
+                    }
+                    else if(arr[0]==3)
+                    {
+                        osn();
+                        ras();
+                        if(arr1[0]==5)
+                        {
+                            sin("black");
+                        }
+                        else if(arr1[0]==6)
+                        {
+                            sin("green");
+                        }
+                        else if(arr1[0]==7)
+                        {
+                            sin("yellow");
+                        }
+                        else
+                        {
+                            sin("red");
+                        }
+                    }
+                    else
+                    {
+                        osn();
+                        ras();
+                        if(arr1[0]==5)
+                        {
+                            cos("black");
+                        }
+                        else if(arr1[0]==6)
+                        {
+                            cos("green");
+                        }
+                        else if(arr1[0]==7)
+                        {
+                            cos("yellow");
+                        }
+                        else
+                        {
+                            cos("red");
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

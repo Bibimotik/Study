@@ -1,0 +1,64 @@
+nav ul 
+{ 
+    position:absolute; 
+    list-style-type: none; 
+} 
+
+a 
+{ 
+    display: block; 
+    text-decoration:none; 
+    color:black; 
+} 
+
+nav > ul > li 
+{ 
+    text-align:center; 
+    padding:3px 0 2px 0; 
+    margin-right:10px; 
+    float:left; 
+    width:150px; 
+    color: black; 
+    font-weight: bold; 
+    border: 2px solid black; 
+    background: url(facultet.png) no-repeat 0 0; 
+    background-size: 25px; 
+    display: block; 
+    height:20px; 
+} 
+
+nav ul li ul li
+{ 
+    display: block; 
+    border: 2px solid black; 
+    text-align: center; 
+    width: 150px; 
+    margin-left: -42px; 
+    margin-top: -2px; 
+} 
+
+nav li ul
+{ 
+    margin-top:6px; 
+    display:none; 
+} 
+
+nav li:hover ul
+{ 
+    display:block; 
+} 
+
+li:nth-child(2):hover
+{ 
+    background-position: 0 -25px; 
+} 
+
+li:nth-child(3):hover
+{ 
+    background-position: 0 -75px; 
+} 
+
+li:nth-child(4):hover
+{ 
+    background-position: 0 -50px; 
+} 

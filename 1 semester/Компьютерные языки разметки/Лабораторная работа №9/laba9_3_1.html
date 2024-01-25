@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <title>Grid</title>
+    <style>
+        body {
+            margin-left: 40px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 10% 50% 30%;
+            grid-template-rows: 25% 50% 15%;
+            grid-template-areas:
+                "n h h"
+                "n ar as"
+                "f f f";
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+        header{
+            border:2px solid black;
+            text-align:center;
+            vertical-align:central;
+            font-size:100px;
+            grid-area:h;
+        }
+        header p {
+            margin:0px;
+        }
+        nav {
+            border: 2px solid black;
+            grid-area: n;
+        }
+        article {
+            border: 2px solid black;
+            grid-area: ar;
+        }
+        aside {
+            border: 2px solid black;
+            grid-area: as;
+        }
+        footer {
+            border: 2px solid black;
+            grid-area: f;
+        }
+    </style>
+</head>
+<body>
+    <header><p>Grid-верстка</p></header>
+    <nav>
+        <p><a href="https://developer.mozilla.org/ru/docs/Web/CSS/grid">Grid on MDN</a></p>
+        <p><a href="http://htmlbook.ru/blog/css-grid-i-flexbox-sravnenie-na-praktike">CSS Grid и Flexbox</a></p>
+        <p><a href="https://webcademy.ru/blog/622/">Grid on WebCademy </a></p>     
+    </nav>
+    <article>
+        CSS Grid – это техника в каскадных таблицах стилей, позволяющая веб-разработчикам создавать сложные адаптивные макеты веб-дизайна более легко и последовательно в различных браузерах. Есть и другие методы макета вебстраниц, которые использовались ранее, включая tables, CSS Box model и CSS Flexbox.
+        CSS Grid – это модель шаблона, оптимизированная для двумерных шаблонов. Используется в качестве модели шаблонов вебсайтов, форм, галерей и всего, что требует точного и внимательного позиционирования. Сети CSS – это новый подход к созданию адаптивных сайтов с большим количеством блоков, расположенных в любых местах сайта. Кроме CSS Grid существует также технология Flexbox, которая очень схожа с CSS Grid.
+    </article>
+    <aside>
+        <p>Свойство grid-template — сокращённая запись для grid-template-columns, grid-template-rows и grid-template-areas в одном объявлении. Можно сделать то же самое с помощью сокращённой записи grid, которая немного короче</p>
+        <p>
+            Сокращённую запись grid также можно использовать для указания grid-auto-flow, но это работает не совсем так, как ожидалось. Мы не просто добавляем ключевое слово row или column где-то в объявлении. Вместо этого нам придётся использовать ключевое слово auto-flow с правильной стороны слеша.
+        </p>
+    </aside>
+    <footer>Надеюсь, эти свежие находки придадут вам уверенность при написании и использовании грида, как это было в моём случае. В этой новой спецификации много тонкостей, но по мере использования она становится интереснее и понятнее.</footer>
+</body>
+</html>

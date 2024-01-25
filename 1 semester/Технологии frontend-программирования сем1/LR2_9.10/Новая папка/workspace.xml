@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="35e8b79f-e7e9-4aba-9181-c1b673e4a922" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HlpB16zfhYyvxTq45ouLW6bft8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="35e8b79f-e7e9-4aba-9181-c1b673e4a922" name="Changes" comment="" />
+      <created>1668869384915</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668869384915</updated>
+      <workItem from="1668869386173" duration="860000" />
+      <workItem from="1668870583918" duration="1215000" />
+      <workItem from="1669293661528" duration="4359000" />
+      <workItem from="1669301572236" duration="2955000" />
+      <workItem from="1669923416772" duration="110000" />
+      <workItem from="1669974839729" duration="215000" />
+      <workItem from="1670573163125" duration="1514000" />
+      <workItem from="1670584527399" duration="1596000" />
+      <workItem from="1670607331032" duration="814000" />
+      <workItem from="1670608559377" duration="69000" />
+      <workItem from="1670779166547" duration="9134000" />
+      <workItem from="1670793823313" duration="549000" />
+      <workItem from="1670794543295" duration="641000" />
+      <workItem from="1670928795983" duration="81000" />
+      <workItem from="1670932346841" duration="6456000" />
+      <workItem from="1671119552604" duration="2271000" />
+      <workItem from="1671121898553" duration="1030000" />
+      <workItem from="1671130034904" duration="688000" />
+      <workItem from="1671281869511" duration="199000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,64 @@
+.p1
+{
+    border-bottom: yellow solid;
+    border-top: orange solid;
+    border-left: brown solid;
+    border-right: darkblue solid;
+}
+
+.p2
+{
+    border-left: #007BA7 solid;
+    border-right: #007BA7 solid;
+}
+
+.p3
+{
+    border-top: rgb(229, 43, 80) solid;
+    border-left: blue dotted;
+    border-bottom: blue dotted;
+    border-right: blue dotted;
+}
+
+.p4
+{
+    border: orange dotted 1px;
+}
+
+.p5
+{
+    border: #B3446C double;
+}
+
+.p6
+{
+    border-left: #CC7722 double;
+    border-bottom: #CC7722 double;
+}
+
+.p7
+{
+    border-top: #B5A642 ridge;
+    border-right: #B5A642 ridge;
+}
+
+.p8
+{
+    border-left: rgb(0, 40, 0) dotted;
+    border-right: rgb(0, 40, 0) dotted;
+    border-bottom: rgb(0, 40, 0) dotted;
+}
+
+.p9
+{
+    border-top: 2px darkblue solid;
+    border-bottom: 2px darkblue solid;
+    border-left: brown dashed;
+    border-right: brown dashed;
+}
+
+.p10
+{
+    border-top: #808000 dashed 1px;
+    border-bottom: #FF7518 solid 3px;
+}

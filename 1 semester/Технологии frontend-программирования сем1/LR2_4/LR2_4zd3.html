@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR2_4zd3</title>
+</head>
+<body>
+    <script>
+        //удаляем элемент и другие действия с массивом
+        let myArray = ['pow','pop','push','shift','round','floor','sline','sort'];
+        document.write('Исходный массив: '+myArray);
+        delete myArray[2];
+        document.write(', новый массив: '+myArray);
+        let x=1 in myArray;
+        document.write(', содержится ли в массиве второй элемент:'+x+'<br>');
+        //функция которая выводит значение 5
+        function znach5() {
+            return 5;
+        }
+        document.write('Чем является объект myArray: '+typeof myArray+'<br>');
+        document.write('Чем является объект znach5: '+typeof znach5+'<br>');
+    </script>
+</body>
+</html>

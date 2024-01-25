@@ -1,0 +1,40 @@
+table
+{
+    border-collapse: collapse;
+    text-align: center;
+}
+
+caption
+{
+    font-size: 20px; 
+}
+
+td, th 
+{
+    border: 2px solid black;
+}
+
+td:nth-child(1):not(.classy)
+{
+    background-color: brown;
+}
+
+td:nth-child(2):not(.classy)
+{
+    background-color: lightpink;
+}
+
+td:nth-child(8)
+{
+   background-color: lightpink;
+}
+
+tr:nth-child(1)
+{
+    background-color: aquamarine;
+}
+
+#r td
+{
+    background-color: none;
+}

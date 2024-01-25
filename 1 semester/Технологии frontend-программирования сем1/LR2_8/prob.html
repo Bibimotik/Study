@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p
+        {
+            text-align: justify;
+            font-size: 16px;
+        }
+        img 
+        {
+            width: 200px;
+            height: 200px;
+        }
+        .p1
+        {
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <img src="cat5.png" id="img3">
+    <p class="p1" id="p5">
+        The Default and Adaptive themes have been refreshed with new tab styles and inactive pane dimming.
+        Themes and Color Schemes support auto dark-mode switching.
+        The Adaptive theme on Windows and Linux now features custom title bars.
+        Support for one of the most popular new programming languages is now shipped by default.
+        Utilize all of the smart syntax-based features of Sublime Text within the modern JavaScript ecosystem.  
+    </p>
+    <img src="cat5.png" id="img4">
+    <script>
+        //что такое событие
+        //какие события знаю
+        // при наведании на картинку появляется другая картинка с рамками
+        const img4 = document.getElementById("img3");
+        img4.onmouseover = function()
+        {
+            if (img4.src.indexOf('cat5.png')>0)
+            {
+                img4.src = 'cat3.png';
+                img4.style.border = '2px solid red';
+            }
+        }
+        img4.onmouseout = function()
+        {
+            if (img4.src.indexOf('cat3.png')>0)
+            {
+                img4.src = 'cat5.png';
+                img4.style.border = '';
+            }
+        }
+        //при наведении на текст появляется новый текст красного цвета
+        const p5 = document.getElementById("p5");
+        let p55 = p5.innerHTML;
+        p5.onmouseover = function()
+        {
+            p5.innerHTML = " Default and Adaptive themes have been refreshed with new tab styles and inactive pane dimming.Themes and Color Schemes support auto dark-mode switching.Adaptive theme on Windows and Linux now features custom title bars.Support for one of the most popular new programming languages is now shipped by default.Utilize all of the smart syntax-based features of Sublime Text within the modern JavaScript ecosystem.";
+            p5.style.height = "50px";
+            p5.style.width = "50px";
+            p5.style.color = "red";
+            p5.style.overflow = "hidden";
+        }
+        p5.onmouseout = function()
+        {
+            p5.innerHTML = p55;
+            p5.style.color = "";
+        }
+        //при наведении на картинку она смещается на 10px
+        const img5 = document.getElementById("img4");
+        img5.onmouseover = function()
+        {
+            img5.style.padding = "0px 0px 0px 20px";
+        }
+        img5.onmouseout = function()
+        {
+            img5.style.padding = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR2_3zd4</title>
+</head>
+<body>
+    <script>
+        let arr = ['pow','pop','push','shift','round','floor','sline','sort'];
+        let arrMath = [];
+        let arrArray = [];
+        for (let method of arr) {
+            if (Math.hasOwnProperty(method)){
+                arrMath.push(method);
+            }
+            else arrArray.push(method);
+        }
+        arrMath.push('of');
+        arrArray.unshift('concat');
+        console.log(arr);
+        console.log(arrMath);
+        console.log(arrArray);
+        console.log(arr.length);
+        console.log(arrMath.length);
+        console.log(arrArray.length);
+    </script>
+</body>
+</html>

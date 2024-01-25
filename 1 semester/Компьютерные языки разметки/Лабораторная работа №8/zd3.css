@@ -1,0 +1,86 @@
+ul
+{
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0; /*убираем отступы*/
+    padding-left: 0; /*убираем отступы*/
+    margin-top: 18px; /*делаем отступ сверху*/
+    height: 50px; /*задаем высоту*/
+}
+
+a
+{
+    text-decoration: none; /*убираем подчеркивание текста ссылок*/
+    color:black; /*меняем цвет ссылок*/
+    padding: 0px 15px; /*добавляем отступ*/
+    display: block;
+}
+
+li
+{
+    float: left; /*Размещаем список горизонтально для реализации меню*/
+    position: relative; /*задаем позицию для позиционирования*/
+    height: 30px;
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+       
+/*Стили для скрытого выпадающего меню*/
+li > ul 
+{
+    position: absolute;
+    top: 25px;
+    display: none;
+}
+
+/*Делаем скрытую часть видимой*/
+li:hover > ul
+{
+    display: block;
+    width: 120px;  /*Задаем ширину выпадающего меню*/    
+}
+
+li:hover > ul > li
+{
+    float: none; /*Убираем горизонтальное позиционирование*/
+}
+
+.first1
+{
+    margin-top: 25px;
+}
+
+.first
+{
+    background-color: yellow;
+    width: 200px;
+    border: 2px solid black;
+}
+
+.second1
+{
+    background-color: orange;
+    border: 2px dashed black;
+}
+
+.second2
+{
+    background-color: orange;
+    border-top: 0;
+    border-left: 2px;
+    border-right: 2px;
+    border-bottom: 2px;
+    border-style: dashed;
+    padding-bottom: 15px;
+
+}
+
+.second3
+{
+    background-color: orange;
+    border-top: 0;
+    border-left: 2px;
+    border-right: 2px;
+    border-bottom: 2px;
+    border-style: dashed;
+}
+

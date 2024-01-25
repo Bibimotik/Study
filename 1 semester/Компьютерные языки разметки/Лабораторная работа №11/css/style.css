@@ -1,0 +1,200 @@
+.container {
+    width: 100%;
+    height: 98vh;
+  }
+  .container .navbar {
+    width: 97%;
+    margin: 10px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10px;
+    background: lightgrey;
+    background-size: 100%;
+    color: #f9f9f9;
+    border: 1px solid black;
+  }
+  .container .navbar .logo {
+    padding: 10px 35px;
+  }
+  .container .navbar .nav-links .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 23px;
+  }
+  .container .navbar .nav-links .menu li {
+    list-style-type: none;
+    padding: 5px 30px;
+  }
+  .container .navbar .nav-links .menu li a {
+    color: brown;
+    text-decoration: none;
+  }
+  .container h1 {
+    margin: 10px 6px;
+    display: block;
+    width: 60%;
+    height: 40px;
+    text-align: center;
+    font-size: 29px;
+    border: 1px solid black;
+    padding: auto;
+  }
+  .container form {
+    width: 38%;
+    margin-left: 20px;
+    margin-top: -52px;
+    float: right;
+    margin-right: 10px;
+  }
+  .container form .main {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    border: 1px solid black;
+    margin-bottom: 10px;
+  }
+  .container form .main input {
+    width: 80%;
+    background: plum;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .container form .main button {
+      background-color: plum;
+    color: white;
+}
+.container form .main p {
+    padding-left: 40px;
+    font-size: 30px;
+    padding-top: -10px;
+    padding-bottom: -10px;
+}
+.container form .main h1 {
+    font-size: 29px;
+    width: 100%;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    border: none;
+}
+.container form h1 {
+    padding-top: 10px;
+    font-size: 29px;
+    width: 100%;
+    margin: 10px auto;
+}
+  .container form legend, .container form input {
+      font-size: 24px;
+      margin: 5px auto;
+      margin-left: 40px;
+    }
+    .container form .knopka {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 16pt;
+        margin: 15px auto;
+    }
+    .container form .section3 .first {
+        overflow: hidden;
+        border: 1px solid black;
+    }
+    .container form .section3 .first img {
+        float: left;
+        padding-bottom: 20px;
+    }
+    .container form .section3 .first p {
+        overflow: hidden;
+        margin-left: 2px;
+        display: inline;
+        font-size: 24px;
+    }
+    .container form .section3 .second {
+        border: 1px solid black;
+    }
+    .container form .section3 .second img {
+        height: 140px;
+        float: left;
+        padding-bottom: 20px;
+    }
+    .container form .section3 .second p {
+        overflow: hidden;
+        margin-left: 2px;
+        font-size: 24px;
+    }
+    .container .section1 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        width: 59%;
+        margin: 10px 6px;
+        height: 352px;
+    }
+    .container .section1 .item1, .container .section1 .item2, .container .section1 .item3 {
+        border: 1px solid black;
+        /* width: 32%;
+        height: 350px; */
+        width: 250px;
+        height: 250px;
+    }
+    .container .section1 .item1 {
+        padding: 0px 10px;
+        font-size: 24px;
+        overflow: hidden;
+    }
+    .container .section1 .item2 {
+        margin: 0px 55px;
+        overflow: hidden;
+        padding: 0 10px;
+        font-size: 24px;
+    }
+    .container .section1 .item3 {
+        overflow: hidden;
+        padding: 0 10px;
+        font-size: 24px;
+    }
+    .container .section2 {
+        padding-left: 50px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 50%;
+        margin: 6px 6px;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .section2 img{
+        padding: 5px;
+    }
+    .container footer h1 {
+        width: 97%;
+        margin: 10px auto;
+        padding: 20px;
+        text-align: left;
+        background-color: lightgrey;
+        font-size: 29px;
+        overflow: hidden;
+    }
+    input{
+      width: 20px;
+      background: plum;
+      color: white;
+    }

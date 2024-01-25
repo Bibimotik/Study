@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Фотогалерея</title>
+    <style>
+        body 
+        {
+            background-color: #FFE2E2;
+            position: fixed;
+            width: 90%;
+            height: 90%;
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            grid-template-rows: 25% 25% 25% 25%;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+        figure 
+        {
+            text-align:center;
+            margin:0; 
+        }
+        figcaption
+        {
+            font-size:40px;
+        }
+        figure img 
+        {
+            height:90%;
+            width:90%;
+        }
+        .gif 
+        {
+            grid-row: 2/4;
+            grid-column: 4/6;
+        }
+        .text 
+        {
+            grid-row: 3/5;
+            grid-column: 1/3;
+            background-image: url("cat.png");
+            background-repeat: no-repeat;
+            background-size: 100%;            
+        }
+        figure, div
+        {
+            margin: 10px;
+        }
+        p
+        {
+            font-size:38px;
+            margin:0px;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <img src="cat.png">
+        <figcaption>Кот</figcaption>
+    </figure>
+    <figure>
+        <img src="cat2.png">
+        <figcaption>Кот</figcaption>
+    </figure>
+    <figure>
+        <img src="cat3.png">
+        <figcaption>Кот</figcaption>
+    </figure>
+    <figure>
+        <img src="cat4.png">
+        <figcaption>Кот</figcaption>
+    </figure>
+    <figure>
+        <img src="cat5.png">
+        <figcaption>Кот</figcaption>
+    </figure>
+    <figure>
+        <img src="cat.png">
+        <figcaption>Кот</figcaption>
+    </figure>
+    <figure>
+        <img src="cat2.png">
+        <figcaption>Кот</figcaption>
+    </figure>
+    <figure>
+        <img src="cat3.png">
+        <figcaption>Кот</figcaption>
+    </figure>
+    <figure>
+        <img src="cat4.png">
+        <figcaption>Кот</figcaption>
+    </figure>
+    <figure>
+        <img src="cat5.png">
+        <figcaption>Кот</figcaption>
+    </figure>
+    <figure>
+        <img src="cat.png">
+        <figcaption>Кот</figcaption>
+    </figure>
+    <figure>
+        <img src="cat2.png">
+        <figcaption>Кот</figcaption>
+    </figure>
+    <figure class="gif">
+        <img src="cat-typing.gif">
+    </figure>
+    <div class="text">
+        <p>выоооооооооооооооооо</p>
+    </div>
+
+</body>
+</html>

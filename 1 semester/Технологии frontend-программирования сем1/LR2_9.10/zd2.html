@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zd2</title>
+    <style>
+    #cat2
+    {
+        position: relative;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <img src="cat2.png" id="cat2">
+    <script>
+        const cat = document.getElementById("cat2");
+        cat.onclick = function()
+        {
+            let start = Date.now(); // время начала
+
+            let timer = setInterval(function() {
+                // сколько времени прошло
+                let timePassed = Date.now() - start;
+
+                if (timePassed >= 5200) {
+                    clearInterval(timer); // закончить анимацию через 5.2 секунды
+                    return;
+                }
+                // отрисовать анимацию на момент timePassed, прошедший с начала анимации
+                draw(timePassed);
+                }, 1);
+            function draw(timePassed) {
+                cat2.style.left = timePassed / 5 + 'px';
+            }
+        }
+    </script>
+</body>
+</html>

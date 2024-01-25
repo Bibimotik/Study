@@ -1,0 +1,22 @@
+img
+{
+    width: 276px;
+    height: 376px;
+}
+
+figure 
+{
+    background: #5f6a72;
+    padding: 10px;
+    display: block;
+    width: 276px;
+    float: left;
+    margin: 0px 0px 10px 15px;
+    text-align: center;
+}
+
+
+figcaption 
+{
+color: blue;
+}

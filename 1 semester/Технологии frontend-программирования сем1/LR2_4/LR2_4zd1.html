@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR2_4zd1</title>
+</head>
+<body>
+    <script>
+        function Gruppa(n, kolich) {
+            this.n=n;
+            this.kolich=kolich;
+            this.add_stud=function add_stud(k) {
+                this.kolich+=k;
+                document.write('В группу ' + this.n + ' добавили '+ k + ' студентов.<br>');
+            }
+            this.sub_stud=function sub_stud(k) {
+                this.kolich-=k;
+                document.write('Из группы ' + this.n + ' исключили '+ k + ' студентов.<br>');
+            }
+        }
+
+        gr1=new Gruppa(1, 28);
+            gr1.sub_stud(2);
+        gr2=new Gruppa(2, 31);
+            gr2.add_stud(3);
+            gr2.sub_stud(5);
+        gr3=new Gruppa(3, 27);
+            gr3.add_stud(6);
+            gr3.sub_stud(2);
+        gr4=new Gruppa(4, 33);
+            gr4.add_stud(3);
+            gr4.sub_stud(1);
+        document.write('<br>В 1 группе: '+gr1.kolich+' студентов.<br>');
+        document.write('Во 2 группе: '+gr2.kolich+' студентов.<br>');
+        document.write('В 3 группе: '+gr3.kolich+' студентов.<br>');
+        document.write('В 4 группе: '+gr4.kolich+' студентов.<br>');
+        //есть ли у объекта свойство
+        let svo='kolich' in gr1;
+        document.write('<br>Есть ли у объекта Gruppa свойство kolich: '+svo+'<br>');
+        //чем является объект
+        document.write('Чем является объект Gruppa: '+typeof gr1+'<br>');
+        //к чему относится gr1
+        document.write(gr1 instanceof Object);
+        document.write(gr1 instanceof Array);
+        document.write(gr1 instanceof String);
+        //чем являются свойства объектов Gruppa
+        document.write('<br>Чем являются свойства объекта Gruppa: '+'n: '+typeof gr1.n+', kolich: '+typeof gr1.kolich+'<br>');
+    </script>
+</body>
+</html>

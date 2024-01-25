@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR2_5zd1</title>
+    <style>
+        h1
+        {
+            text-align: center;
+            color: violet;
+        }
+        h2
+        {
+            text-align: center;
+            color: violet;
+        }
+        span
+        {
+            color: #990000;            
+        }
+        table, td, th
+        {
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+        <h1>Всемирноизвестные напитки</h1>
+        <h2>На какие группы можно разделить эти напитки по вкусу?</h2>
+            <ol>
+                <li>Чай</li>
+                    <ul type="square">
+                        <li>чёрный Чай</li>
+                        <li>красный чай</li>
+                        <li>зеленый чай</li>
+                        <li>улун</li>
+                    </ul>
+                <li>Кофе</li>
+                    <ul type="disc">
+                        <li>сырая робуста</li>
+                        <li>жареная арабика</li>
+                        <li>марагоджип</li>
+                    </ul>
+                <li>Какао</li>
+                    <ul type="circle">
+                        <li>промышленного производства</li>
+                        <li>органическое промышленное какао</li>
+                        <li>живое какао</li>
+                    </ul>
+            </ol>
+        <h2>Горячие Напитки</h2>
+        <h3>Чаи</h3>
+                <p>
+                <a href="D:\Учеба\Компьютерные языки разметки\Лабораторная работа №1\second.html"><span id="span1">Чай</span></a> — напиток, получаемый варкой, завариванием и/или настаиванием листа чайного куста, который предварительно подготавливается специальным образом. 
+                Чай — также сам лист чайного куста, обработанный и подготовленный для приготовления напитка. Подготовка включает предварительную сушку (вяление), скручивание, более или менее длительное ферментативное окисление, окончательную сушку. 
+                Прочие операции вводятся в процесс только для производства отдельных видов и сортов чая.
+                </p>
+            <h3>Кофе</h3>
+                <p>
+                    Ко́фе — напиток из жареных и перемолотых зёрен кофейного дерева или кофейного куста. 
+                    Открытие кофе относится приблизительно к 850 г. н. э., но полное признание его пришло много веков спустя. 
+                    Первоначально в качестве тонизирующего средства употреблялся не отвар обжаренных зёрен, а непосредственно сырые кофейные ягоды. 
+                    Чуть позже в Йемене начали готовить напиток из зрелой высушенной мякоти кофейного плода, получая напиток — «гешир» (он же кишр) — так называемый «белый йеменский кофе».
+                </p>
+            <h3>Какао</h3>
+                <p>
+                    Кака́о[2][3], или шокола́дное де́рево[3] (лат. Theobrōma cacāo) — вид вечнозелёных деревьев из рода Теоброма (Theobroma). 
+                    Ранее этот род относили к семейству Стеркулиевые (Sterculiaceae), сейчас относят к семейству Мальвовые (Malvaceae), подсемейству Byttnerioideae[4].
+                    Растение происходит из субэкваториальных регионов Южной Америки, культивируется по всему свету в тропиках обоих полушарий ради получения семян, используемых в кондитерской промышленности (главным образом как основное составляющее шоколада) и медицине. 
+                    Словом «какао» также называют семена дерева какао и получаемый из них порошок; такое же название носит и сам напиток.
+                </p>
+        <h2>Таблица производителей</h2>
+        <table id="table1">
+            <tr>
+                <td rowspan="2">Товар</td>
+                <td rowspan="2">Производитель</a></td>
+                <td colspan="2">Цена</td>
+            </tr>
+            <tr>
+                <td>Без НДС</td>
+                <td>НДС</td>
+            </tr>
+            <tr>
+                <td>Чай</td>
+                <td>Yorkshire Tea</td>  
+                <td>30</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>Кофе</td>
+                <td>Bigelow</td>
+                <td>50</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>Какао</td>
+                <td>Lipton</td>
+                <td>25</td>
+                <td>35</td>
+            </tr>
+        </table>
+        <span>Средняя стоимость: &#8382 </span>
+<script>
+    let arr=[];
+    let all=document.querySelectorAll('*');
+    for (let i=0;i<all.length;i++)
+    {
+        arr+=i+"-"+all[i].tagName+"  ";
+    }
+    let body_arr=[];
+    let body = document.body.childNodes;
+    for (let i=1;i<body.length;i+=2)
+    {
+        body_arr+=body[i].tagName+" ";
+    }
+    alert(arr);
+    alert(body_arr);
+
+    alert(document.querySelector("span").innerHTML);
+    alert(document.getElementsByTagName("span")[0].innerHTML);
+    alert(document.getElementById("span1").innerHTML);
+    let table=document.getElementById("table1");
+    let row=table.getElementsByTagName("tr");
+    let sr=0;
+    for (let i=2; i<row.length; i++)
+    {
+        sr+=Number(row[i].getElementsByTagName("td")[3].innerHTML);
+    }
+    document.getElementsByTagName("span")[1].innerHTML+=" "+sr/3;
+</script>
+</body>
+</html>

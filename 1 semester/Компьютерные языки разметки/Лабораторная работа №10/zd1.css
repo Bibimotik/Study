@@ -1,0 +1,150 @@
+body 
+{
+    justify-content:space-between;
+    display: flex;
+    flex-flow: row wrap;
+}
+h2 
+{
+    flex-basis:100%;
+    text-align: center;
+    border: 2px solid black;
+    margin:0;
+}
+p 
+{
+    font-size: 23px;
+    flex-basis: 25%;
+    text-align: justify;
+    border: 2px solid black;
+}
+.p1 
+{
+    flex-basis: 40%;
+}
+nav
+{
+    text-align:center;
+    flex-basis:100%;
+}
+ul 
+{
+    
+    right:0px;
+    top:10px;
+    margin-top: 5px;
+    padding: 0;
+
+    list-style-type: none;
+}
+li
+{
+    border:  2px solid black;
+    display:inline;
+    margin: 3px 0 0 0;
+}
+video
+{
+    padding: 10px;
+    /* height:100px; */
+    width: 260px;
+    height: 150px;
+}
+audio
+{
+    padding: 10px;
+
+    display:block;
+}
+label
+{
+    display:none;
+}
+input
+{
+    display:none;
+}
+a 
+{
+    display:inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+@media(max-width:700px) 
+{
+    ul
+    {
+        position:static;
+    }
+    li
+    {
+        display:block;
+    }
+    body 
+    {
+        justify-content: space-between;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    p
+    {
+        margin: 10px 0 0 0;
+    }
+    label 
+    {
+        display:block;
+        position: absolute;
+        right: 20px;
+        font-size:27px;
+    }
+    input 
+    {
+        display:block;
+        position: absolute;
+        right: 20px;
+        top: 14px;
+        opacity:0;
+    }
+    nav
+    {
+        display:none;
+    }
+    input:checked ~ nav
+    {
+        display:block;
+    }
+}
+
+
+figure
+{
+    display: inline-block;
+    margin: 50px;
+}
+
+img
+{
+    width: 400px;
+    height: 400px;
+}
+
+.foto
+{
+    text-align: center;
+    margin-top: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+}
+
+@media (max-width: 1280px)
+{
+    .foto
+    {
+        color: green;
+        display: flex;
+        flex-direction: column;
+    }
+}

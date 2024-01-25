@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="zd1.css" ?>
+
+<list>
+
+<head>
+    <nsong>Песня</nsong>
+    <ndata>Дата</ndata>
+</head>
+
+<read>
+    <song>Destination Freestyle</song>
+    <data>12.12.2022</data>
+</read>
+
+<read>
+    <song>Give Me A Kiss</song>
+    <data>11.11.2022</data>
+</read>
+
+<read>
+    <song>Caroline</song>
+    <data>10.10.2022</data>
+</read>
+</list>

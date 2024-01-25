@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR2_3zd1</title>
+</head>
+<body>
+    <script>
+        let min, max, minId, maxId;
+        let myArray = new Array;
+        myarray[0] = 6 - math.PI*math.PI + 3 * math.exp(8);
+        myarray[1] = 2 * math.cos(4) + math.cos(12) + 8 - math.exp(3);
+        myarray[2] = 3 * math.sin(9) + math.log(5);
+        myarray[3] = 2 * math.tan(5) + 6 - math.E;
+        min=math.min(...myarray);
+        max=math.max(...myarray);
+        minId=myarray.indexОf(min);
+        maxId=myarray.indexOf(max);
+        document.write('Это минимальный элемент: '+min+'<br>'+'А это его номер: '+minId+'<br>');
+        document.write('Это максимальный элемент: '+max+'<br>'+'А это его номер: '+maxId);
+    </script>
+</body>
+</html>

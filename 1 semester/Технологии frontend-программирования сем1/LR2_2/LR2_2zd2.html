@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+</head>
+<body>
+    <script>
+            a=prompt("Введите число a: ");
+            b=prompt("Введите число b: ");
+            document.write ("<table border=1 align=center>");
+            for (let z=1; z<=a; z++) {
+                document.write("<tr>");
+                document.write("<td>" + z + "</td>");
+                    for (let c=2; c<=b; c++) {
+                        document.write("<td>" + z*c + "</td>");
+                    }
+                document.write("</tr>");
+            }
+        document.write("</table>");
+    </script>
+</body>
+</html>

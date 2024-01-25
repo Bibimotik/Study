@@ -1,0 +1,32 @@
+p
+{
+    display: inline-block;
+    width: 1059px;
+    text-align: justify;
+}
+
+aside
+{
+    float: right;
+}
+
+a:link
+{
+    text-decoration: none;
+    color: red;
+}
+
+a:visited
+{
+    color: #8B0000;
+}
+
+a:hover
+{
+    color: green;
+}
+
+a:active
+{
+    color: rgb(184, 134, 11);
+}

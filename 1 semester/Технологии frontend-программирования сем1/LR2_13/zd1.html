@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zd1</title>
+</head>
+<body>
+    <script>
+        var min = 0, max = 100;
+        var arr = [];
+        for (let i = 0; i < 10; i++) 
+        {
+            let x = Math.floor(Math.random() * (max - min + 1)) + min;
+            arr.push(x);
+        }
+        console.log(arr);
+        var zn = prompt('Введите число: ');
+        zn = Number(zn);
+        document.write(arr.includes(zn));
+    </script>
+</body>
+</html>

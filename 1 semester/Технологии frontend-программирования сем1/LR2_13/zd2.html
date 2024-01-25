@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zd2</title>
+</head>
+<body>
+    <script>
+        var min = 0, max = 100;
+        var arr = [];
+        for (let i = 0; i < 10; i++) 
+        {
+            let x = Math.floor(Math.random() * (max - min + 1)) + min;
+            arr.push(x);
+        }
+        arr.push(NaN);
+        document.write(arr.indexOf(NaN) + '\n');
+        document.write(arr.includes(NaN));
+    </script>
+</body>
+</html>

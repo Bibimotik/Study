@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR2_4zd2</title>
+</head>
+<body>
+    <script>
+        function Student(name,secondName,fiz,mat,inf) {
+            this.name=name;
+            this.secondName=secondName;
+            this.fiz=fiz;
+            this.mat=mat;
+            this.inf=inf;
+            this.sr=function sr(){
+                this.sr=(fiz+mat+inf)/3;
+            }
+        }
+        //добавление нового свойства со значением 1
+        Student.prototype.kurs=this.kurs=1;
+        s1=new Student('Михаил','Банкузов',7,4,8);
+            s1.sr();
+        s2=new Student('Максим','Плеско',6,10,4);
+            s2.sr();
+        s3=new Student('Денис','Дмуховский',5,7,10);
+            s3.sr();
+        s4=new Student('Арсений','Курилёнок',1,5,9);
+            s4.sr();
+        alert(s1.name+' '+s1.secondName);
+        alert(s2.name+' '+s2.secondName);
+        alert(s3.name+' '+s3.secondName);
+        alert(s4.name+' '+s4.secondName);
+        document.write('Студент '+s1.secondName+' '+s1.name+' '+s1.kurs+' курса'+' имеет средний балл: '+s1.sr.toFixed(1)+'<br>');
+        document.write('Студент '+s2.secondName+' '+s2.name+' '+s2.kurs+' курса'+' имеет средний балл: '+s2.sr.toFixed(1)+'<br>');
+        document.write('Студент '+s3.secondName+' '+s3.name+' '+s3.kurs+' курса'+' имеет средний балл: '+s3.sr.toFixed(1)+'<br>');
+        document.write('Студент '+s4.secondName+' '+s4.name+' '+s4.kurs+' курса'+' имеет средний балл: '+s4.sr.toFixed(1));
+        //есть ли у объекта свойство
+        let svo='gruppa' in s1;
+        document.write('<br>Есть ли у объекта Student свойство gruppa: '+svo+'<br>');
+        //к чему относится s1
+        document.write('<br>Относиться ли объект к объекту: ');
+        document.write(s1 instanceof Object);
+        document.write('<br>Относиться ли объект к массиву: ');
+        document.write(s1 instanceof Array);
+        document.write('<br>Относиться ли объект к строке: ');
+        document.write(s1 instanceof String);
+        //чем является объект
+        document.write('<br>Чем является объект Student: '+typeof s1+'<br>');
+        //чем являются свойства объектов Student
+        console.log(typeof s1.name+typeof s1.secondName+typeof s1.fiz+typeof s1.mat+typeof s1.inf);
+    </script>
+</body>
+</html>

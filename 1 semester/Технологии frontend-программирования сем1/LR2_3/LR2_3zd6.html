@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR2_3zd6</title>
+</head>
+<body>
+    <script>
+        let date = new Date();
+        let month = ['1','2','3','4','5','6','7','8','9','10','11','12'];
+        document.write('<table align=center border=3 bgcolor=#d3d3d3>');
+            document.write('<tr align=center><td>'+'Год'+'</td><td>'+date.getFullYear()+'</td></tr>');
+            document.write('<tr align=center><td>'+'Месяц'+'</td><td>'+month[date.getMonth()]+'</td></tr>');
+            document.write('<tr align=center><td>'+'День'+'</td><td>'+date.getDay()+'</td></tr>');
+            document.write('<tr align=center><td>'+'Час'+'</td><td>'+date.getHours()+'</td></tr>');
+            document.write('<tr align=center><td>'+'Минуты'+'</td><td>'+date.getMinutes()+'</td></tr>');
+            document.write('<tr align=center><td>'+'Секунды'+'</td><td>'+date.getSeconds()+'</td></tr>');
+        document.write('</table>');
+    </script>
+</body>
+</html>

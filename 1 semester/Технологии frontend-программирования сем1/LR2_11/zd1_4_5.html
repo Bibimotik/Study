@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="D:\Учеба\Технологии frontend-программирования\jquery-3.6.2.js"></script>
+</head>
+<body>
+    <input type="radio" value="1" id="id1" name="radio"><label for="id1">y=x^2</label>
+    <input type="radio" value="2" id="id2" name="radio"><label for="id2">y=x^3</label>
+    <input type="radio" value="3" id="id3" name="radio"><label for="id3">y=sin(x)</label>
+    <input type="radio" value="4" id="id4" name="radio"><label for="id4">y=cos(x)</label>
+    <select id="selectid">
+        <option value="F00">Красный</option>
+        <option value="0F0">Зеленый</option>
+        <option value="00F">Синий</option>
+    </select>
+
+    <script>
+        function fun1(x)
+        {
+            return Math.pow(x, 2);
+        }
+        function fun2(x)
+        {
+            return Math.pow(x, 3);
+        }
+        function fun3(x)
+        {
+            return Math.sin(x);
+        }
+        function fun4(x)
+        {
+            return Math.cos(x);
+        }
+        $('#id1').click(function () { graph(fun1) });
+        $('#id2').click(function () { graph(fun2) });
+        $('#id3').click(function () { graph(fun3) });
+        $('#id4').click(function () { graph(fun4) });
+        function graph(expression)
+        {
+            canvasdelete();
+            canvascreate();
+            let canvas = $('#canvasid')[0];
+            if (canvas.getContext)
+            {
+                let ctx = canvas.getContext('2d');
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                let scale = 40;
+
+                ctx.translate(canvas.width / 2, canvas.height / 2);
+                ctx.beginPath();
+                for (let x = -10; x < 10; x++)
+                {
+                    ctx.moveTo(x * scale, -canvas.height / 2);
+                    ctx.lineTo(x * scale, canvas.height / 2);
+                    ctx.moveTo(-canvas.width / 2, x * scale);
+                    ctx.lineTo(canvas.width / 2, x * scale);
+                }
+                ctx.stroke();
+                ctx.strokeStyle = "#" + fun5();
+
+                ctx.beginPath();
+                for (let x = -5; x <= 5; x += 0.05)
+                {
+                    ctx.lineTo(x * scale, -expression(x) * scale);
+                }
+                ctx.stroke();
+            }
+        }
+        function canvascreate()
+        {
+            let canvas = $('<canvas width="400px" height="400px" id="canvasid"></canvas>');
+            $(canvas).css('display', 'block');
+            $('body').append($(canvas));
+        }
+        function canvasdelete()
+        {
+            let canvas = $('#canvasid');
+            if (canvas)
+            {
+                canvas.remove();
+            }
+        }
+        function fun5()
+        {
+            return $('#selectid option:selected').val();
+        }
+    </script>
+</body>
+</html>

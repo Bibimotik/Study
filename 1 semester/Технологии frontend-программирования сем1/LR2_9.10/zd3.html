@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zd3</title>
+    <style>
+        img
+        {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <img id="img1" src="cat2.png">
+    <script>
+        let kot= document.getElementById('img1');
+        kot.onclick = function() 
+        {
+            let start = Date.now();
+            let time = setInterval(function ()
+            {
+                let x = Date.now() - start;
+                kot.style.top = 50 * Math.sin(x / 100) + 'px';
+                kot.style.left = x / 4 + 'px';
+                if (x > 4500)
+                {
+                    clearInterval(time);
+                }
+            },1)
+            function vernyt()
+            {
+                kot.style.transform = 'translate(-1126px, -44px)';
+            }
+            setTimeout(vernyt, 4500);
+        }
+    </script>
+</body>
+</html>

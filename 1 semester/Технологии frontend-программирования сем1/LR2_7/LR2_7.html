@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR2_7</title>
+    <link href="LR2_7.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <form>
+        <p><textarea rows="4">Факультет информационных технологий</textarea></p>
+        <p><input type="text" placeholder="Фамилия"><br/>
+        <input type="text" placeholder="Имя"></p>
+        <p><label for="selection">Специальность</label>
+            <select size="1" id="selection">
+                <option selected disabled hidden>Выберите специальность</option>
+                <option>ПОИТ</option>
+                <option>ИСиТ</option>
+                <option>ПОИБМС</option>
+                <option>ДЭВИ</option>
+            </select></p>
+        <br/>Курс<br/>
+            <label><input type="radio" value="1" name="kurs" id="kurs1">1</label>
+            <label><input type="radio" value="2" name="kurs" id="kurs2">2</label>
+            <label><input type="radio" value="3" name="kurs" id="kurs3">3</label>
+            <label><input type="radio" value="4" name="kurs" id="kurs4">4</label>
+        <br/>Предметы<br/>
+            <label><input type="checkbox" value="ОИТ">ОИТ</label>
+            <label><input type="checkbox" value="ОАП">ОАП</label>
+            <label><input type="checkbox" value="История">История</label>
+            <label><input type="checkbox" value="Физика">Физика</label>
+            <label><input type="checkbox" value="Математика">Математика</label>
+        <p>
+            <input type="button" value="submit">
+            <input type="button" value="reset">
+        </p>
+        <p><input type="button" value="Напечатать" id="buttonPrint"></p>
+    </form>
+
+    <script>
+        const buttonPrint = document.getElementById('buttonPrint');
+        buttonPrint.onclick = function()
+        {
+            win = window.open(' ', ' ');
+            win.document.write('<title>Вывод</title>');
+            win.document.write('<form width="500px";><p align="center">' + document.forms[0].elements[0].value + '</p>');
+            let arr = [];
+            for (let i = 4; i<8; i++)
+            {
+                qwe = document.forms[0].elements[i];
+                if(qwe.checked != true)
+                {
+
+                }
+                else
+                {
+                    rty = document.forms[0].elements[i].value;
+                    arr += rty;
+                }
+            }
+            win.document.write('<p>Студент ' + document.forms[0].elements[1].value + ' специальность ' + document.forms[0].elements[3].value + ' курс ' + arr[0] + ' должен сдавать следущие предметы: </p></form>');
+            for (i = 8; i<13; i++)
+            {
+                ghj = document.forms[0].elements[i];
+                if (ghj.checked != true)
+                {
+
+                }
+                else
+                {
+                    klu = document.forms[0].elements[i].value;
+                    win.document.write('<ul type="circle"><li>' + klu + '</li></ul>');
+                }
+            }
+
+            win.document.write('<form><p><select size="1" id="selection"><option selected disabled hidden>Предметы</option>');
+            for (i = 8; i<13; i++)
+            {
+                vbn = document.forms[0].elements[i];
+                if (vbn.checked != true)
+                {
+
+                }
+                else
+                {
+                    mkl = document.forms[0].elements[i].value;
+                    win.document.write('<option>' + mkl + '</option>');
+                }
+            }
+            win.document.write('</select></p></form>');
+        }
+    </script>
+</body>
+</html>

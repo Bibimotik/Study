@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR2_6</title>
+    <style>
+        td
+        {
+            border: 3px solid black;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+</head>
+<body>
+	<button id="button1" onclick="createWindow()">Создать окно</button>
+	<button id="button2" onclick="closeWindow()">Закрыть окно</button>
+	<button id="button3" onclick="insertText()">Добавить текст</button>
+    <script type="text/javascript">
+        const button1 = document.getElementById('button1');
+        button1.onclick = function()
+        {
+            win = window.open(' ', ' ');
+            win.document.write('<title> Новое окошко </title>');
+            win.document.write('Произвольный Текст<br>' + 'Имя окна: ' + win.document.title);
+        }
+        const button2 = document.getElementById('button2');
+        button2.onclick = function()
+        {
+            win.close();
+        }
+        const button3 = document.getElementById('button3');
+        button3.onclick = function()
+        {
+            win.document.write(' Mike ');
+        }
+        document.write('<br> <table> <tr><td>свойство</td><td>значение</td></tr>');
+        document.write('<tr><td>userAgent </td><td>' + navigator.userAgent + '</td></tr>');
+        document.write('<tr><td>appVersion </td><td>' + navigator.appVersion + '</td></tr>');
+        document.write('<tr><td>userappName </td><td>' + navigator.appName + '</td></tr>');
+        document.write('<tr><td>appCodeName </td><td>' + navigator.appCodeName + '</td></tr>');
+        document.write('<tr><td>platform </td><td>' + navigator.platform + '</td></tr>');
+        document.write('<tr><td>javaEnabled </td><td>' + navigator.javaEnabled() + '</td></tr>');
+        document.write('<tr><td>width и height </td><td>' + window.screen.width + "x" + window.screen.height + '</td></tr>');
+        document.write('<tr><td>colorDepth</td><td>' + screen.colorDepth + '</td></tr>');
+        document.write('<tr><td>href </td><td>' + location.href + '</td></tr>');
+        document.write('<tr><td>length </td><td>' + history.length + '</td></tr>');
+        document.write('<tr><td>pathnam </td><td>' + location.pathname + '</td></tr>');
+        document.write('<tr><td>host </td><td>' + location.host + '</td></tr>');
+    </script>
+</body>
+</html>

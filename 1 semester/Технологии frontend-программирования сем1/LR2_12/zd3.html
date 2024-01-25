@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zd4</title>
+</head>
+<body>
+    <script>
+        var photo =
+        {
+            name: "Иван",
+            secondname: "Иванов",
+            patronymic: "Иванович",
+            pr(){document.write(this.name + " " + this.secondname + " " + this.patronymic + "<br>")}
+        }
+        photo.pr();
+        var photo2 = new Object();
+        photo2 = Object.create(photo);
+        photo2.name = "Михаил";
+        photo2.pr();
+    </script>
+</body>
+</html>

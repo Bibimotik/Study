@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3</title>
+</head>
+<body>
+    <script>
+            let leng;
+            let area;
+            a= +prompt('Введите начальный радиус: ');
+            b= +prompt('Введите конечный радиус: ');
+            document.write('<table align=center border=3> <tr> <td>Радиус</td> <td>Длина окружности</td> <td>Площадь круга</td> </tr>');
+            do {
+                leng = Math.round(2 * 3.14 * a);
+                area = Math.round(3.14 * a * a);
+                document.write('<tr><td>' + a.toFixed(1) + '</td><td>' + leng + '</td><td>' + area + '</td></tr>');
+                a = a + 0.3;
+            }
+            while (a <= b);
+            document.write(table + '</table>');
+    </script>
+</body>
+</html>
