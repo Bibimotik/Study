@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <link media="all" href="css/form_styles.css" rel="stylesheet">
+    <style>
+        h1{
+            font-size: 17pt;
+        }
+        form {
+            background-color: #000000;
+            width: 300px;
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <title>Форма для входа</title>
+</head>
+<body>
+    <form method="post" action="/project/php/workshop.php" onsubmit="return check(document.getElementsByName('telephone')[0], document.getElementsByName('password')[0]);">
+        <h1>Форма для входа мастера</h1>
+        <span><a href="index.html" class="exit">&#10005;</a></span>
+        <p>
+            <label>Номер телефона</label><br>
+            <input type="tel" class="input_text_teg" name="telephone" placeholder="+375 (00) 000-00-00" required>
+        </p>
+        <p>
+            <label>Пароль</label><br>
+            <input type="password" class="input_text_teg" name="password" required>
+        </p>
+        <p>
+            <a href="">Очистить</a>
+        </p>
+        <p><input type="submit" value="Войти" class="visuale_button submit_button"></p>
+    </form>
+
+    <script src="js/input_master.js"></script>
+</body>
+</html>

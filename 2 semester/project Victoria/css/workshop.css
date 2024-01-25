@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("/project/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+* {
+    padding: 0px;
+    font-family: Montserrat;
+}
+
+body {
+    background-color: #ffffff;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 40pt;
+    margin-bottom: 20px;
+}
+
+.active_order table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.active_order tr {
+    border: 2px solid #aadd00;
+    vertical-align: central;
+}
+.active_order tr:first-child {
+    border: none;
+}
+.active_order td, .active_order th {
+    border: none;
+    padding: 5px;
+    text-align: center;
+}
+.compleate_button {
+    background-color: #aadd00;
+    border: none;
+    padding: 5px 10px;
+}
+.compleate_button:hover {
+    background-color: #99cc00;
+}
+
+.order_list {
+    border: 5px solid #aadd00;
+}
+.order_list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.order_list tr {
+    border: 2px solid #aadd00;
+}
+.order_list td, .order_list th {
+    border: none;
+    padding: 5px;
+}

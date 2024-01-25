@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link media="all" href="css/form_styles.css" rel="stylesheet">
+    <title>Онлайн запись</title>
+</head>
+<body>
+    <form method="post" action="php/order.php">
+        <h1>Заказать услугу</h1>
+        <span><a href="index.html" class="exit">&#10005;</a></span>
+        <p class="main-text">
+            Укажите свой телефон и адрес парикмахерской, чтобы заказать услугу в один клик
+        </p>
+        <p class="telephone-container">
+            <label>Номер телефона</label><br>
+            <input type="tel" class="input_text_teg" name="telephone" placeholder="+375 (00) 000-00-00" required>
+        </p>
+        <p class="adres-container">
+            <label>Адрес</label><br>
+            <select class="input_text_teg" id="adres" name="adres" required></select>
+        </p>
+        <p class="date-container">
+            <label>Дата</label><br>
+            <select class="input_text_teg" name="date" required>
+                <option disabled selected hidden>Выберите дату</option>
+            </select>
+        </p>
+        <p class="time-container">
+            <label>Время</label><br>
+            <select class="input_text_teg" name="time" required>
+                <option disabled selected hidden>Выберите время</option>
+            </select>
+        </p>
+        <script src="js/adreses_list.js"></script>
+        <script>
+            fillAdresSelect("find_adres.php", "adres", "Выберите вариант");
+        </script>
+        <p class="clear-container">
+            <a href="">Очистить</a>
+        </p>
+        <p class="submit-container"><input type="submit" value="Заказать" class="visuale_button submit_button"></p>
+    </form>
+    <script>
+
+    </script>
+</body>
+</html>

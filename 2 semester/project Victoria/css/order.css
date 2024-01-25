@@ -1,0 +1,36 @@
+
+.main_region {
+    background-color: #000000;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.header {
+}
+
+.title {
+    font-size: 40pt;
+    text-align: center;
+    margin: 20px;
+}
+
+.page {
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.exit_button {
+    width: 260px;
+    margin-top: 20px;
+    padding: 10px;
+}

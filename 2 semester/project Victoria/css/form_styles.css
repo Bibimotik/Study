@@ -1,0 +1,120 @@
+@font-face{
+    font-family: "Cormorant Garamond";
+    src: url("../fonts/CormorantGaramond-Light.woff") format("woff");
+}
+* {
+    font-family: "Cormorant Garamond";
+    font-style: normal;
+}
+html {
+    height: 100%
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    background-size: cover;
+
+    -moz-user-select: none;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+form {
+    background-color: #000000;
+    width: 300px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+label, textarea{
+    color: #ffffff;
+}
+textarea{
+    background-color: #000000;
+}
+h1 {
+    font-size: 20pt;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 40px;
+    color: #BA936B;
+}
+h1 ~ p {
+    font-size: 12pt;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+#date {
+    border: none;
+}
+#date::backdrop {
+    background: rgba(0, 0, 0, 0.25);
+}
+.date_button {
+    background-color: #808080;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 14pt;
+}
+input, select, input:focus{
+    border-radius: 5px;
+    background-color: #000000;
+    color: #ffffff;
+}
+.input_text_teg {
+    width: 80%;
+    height: 28px;
+    border: 1px solid #808080;
+    margin: 5px 0px;
+}
+a {
+    text-decoration: none;
+    font-size: 10pt;
+    float: right;
+    margin-right: 10px;
+}
+a:hover, a:visited:hover{
+    color: #BA936B;
+}
+a:visited{
+    color: #ffffff;
+}
+.visuale_button {
+    background-color: #000000;
+    border: 2px solid #BA936B;
+    border-radius: 5px;
+}
+.visuale_button:hover {
+    background-color: #BA936B;
+    color: #ffffff;
+}
+.submit_button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+}
+span{
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: 287px;
+    color: #BA936B;
+}
+.exit{
+    color: #ffffff;
+    font-size: 20px;
+}
+.exit:hover, .exit:visited:hover{
+    color: #BA936B;
+}
+.exit:visited{
+    color: #ffffff;
+}

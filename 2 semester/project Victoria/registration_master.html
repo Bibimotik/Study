@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link media="all" href="css/form_styles.css" rel="stylesheet">
+    <style>
+        form {
+            width: 50%;
+        }
+        h1 ~ p {
+            font-size: 12pt;
+            margin-bottom: 10px;
+        }
+        form {
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+        .input_text_teg {
+            width: 200px;
+        }
+        .page {
+            display: flex;
+        }
+        .left_page {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .right_page {
+            flex: 1;
+        }
+        .wrong_password {
+            color: #ff0000;
+            font-size: 10pt;
+        }
+        span{
+            left: 95%;
+        }
+    </style>
+    <title>Форма для входа</title>
+</head>
+<body>
+    <form method="post" action="php/registration_master.php" onsubmit="return PasswordCheck();">
+        <h1>Форма для регистрации мастеров</h1>
+        <span><a href="index.html" class="exit">&#10005;</a></span>
+        <div class="page">
+            <div class="left_page">
+                <p>
+                    <label>ФИО</label><br>
+                    <input type="text" class="input_text_teg" name="full_name" required>
+                </p>
+                <p>
+                    <label>Адрес парикмахерской</label><br>
+                    <input type="text" class="input_text_teg" name="adres" required>
+                </p>
+                <p>
+                    <label>Номер телефона</label><br>
+                    <input type="tel" class="input_text_teg" name="telephone" placeholder="+375 (00) 000-00-00" required>
+                </p>
+                <p>
+                    <label>Пароль</label><br>
+                    <input type="password" class="input_text_teg" name="password" required><br>
+                    <input type="password" class="input_text_teg" name="check_password" required><br>
+                    <p class="wrong_password" id="wrong_password">Пароль не совпал</p>
+                </p>
+            </div>
+            <div class="right_page">
+                <p>
+                    <label>Время работы</label>
+                    с <input type="time" class="input_text_teg" name="open_time" style="width: 100px" required>
+                    до <input type="time" class="input_text_teg" name="close_time" style="width: 100px" required><br>
+                    <label>Время для обслуживания одного клиента</label>
+                    <input type="time" class="input_text_teg" name="step" style="width: 100px" required>
+                </p>
+            </div>
+        </div>
+        <p>
+            <a href="">Очистить</a>
+        </p>
+        <p><input type="submit" value="Регистрация" class="visuale_button submit_button"></p>
+    </form>
+
+    <script src="js/registration_master.js"></script>
+</body>
+</html>
