@@ -1,0 +1,28 @@
+<Window
+	x:Class = "application.ShowWindow.CreateOrderSparePart"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:application.ShowWindow"
+	mc:Ignorable = "d"
+	Title = "CreateOrderSparePart" Height = "250" Width = "500">
+	<Grid>
+		<StackPanel Grid.Row="0">
+			<Label>Ваш номер телефона:</Label>
+			<TextBox x:Name="phone_text"/>
+			<Button Content="войти" Click="login_Click"/>
+			
+			
+			<Label>Запчасть:</Label>
+			<ComboBox x:Name="sparePartBox">
+				
+			</ComboBox>
+			
+			<Label>Количество:</Label>
+			<TextBox x:Name="quantity_text"/>
+			
+			<Button x:Name="save" Content="оформить заявку" Click="save_Click"/>
+		</StackPanel>
+	</Grid>
+</Window>

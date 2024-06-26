@@ -1,0 +1,21 @@
+<Window
+	x:Class = "application.InteractWindow.ForBalances.CarBalances"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:application.InteractWindow.ForBalances"
+	mc:Ignorable = "d"
+	Title = "CarBalances" Height = "500" Width = "800">
+	<Grid>
+		<StackPanel>
+			<ScrollViewer VerticalScrollBarVisibility="Auto" Height="400">
+				<DataGrid x:Name="carsGrid" AutoGenerateColumns="True"/>
+			</ScrollViewer>
+			<StackPanel Orientation="Horizontal">
+				<Label>Всего доступно машин:</Label>
+				<TextBlock x:Name="available"/>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</Window>

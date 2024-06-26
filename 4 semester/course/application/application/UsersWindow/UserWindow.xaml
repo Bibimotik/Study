@@ -1,0 +1,28 @@
+<Window
+	x:Class = "application.UserWindow"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:application"
+	mc:Ignorable = "d"
+	Title = "UserWindow" Height = "300" Width = "500">
+	<Grid Background="RosyBrown">
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		
+		<StackPanel Grid.Row="0">
+			<Button Content="просмотреть информацию о машинах/запчастях" Click="open_ShowCarsSpareParts"/>
+			<Button Content="поиск машин/запчастей" Click="open_SearchCarsSpareParts"/>
+			<Button Content="просмотреть 30 последних отзывов" Click="open_ShowAllReviews"/>
+			<Button Content="заказать машину" Click="open_CreateOrderCar"/>
+			<Button Content="заказать запчасть" Click="open_CreateOrderSparePart"/>
+			<Button Content="записаться на обслуживание" Click="open_CreateServiceSheet"/>
+			<Button Content="оставить отзыв" Click="open_CreateReview"/>
+			<Button Content="просмотреть статус заказов машин/запчастей" Click="open_ShowDataStatusOrders"/>
+			<Button Content="просмотреть историю заказов машин/запчастей" Click="open_ShowHistory"/>
+			<Button Content="посмотреть историю обслуживания" Click="open_ShowServiceSheet"/>
+		</StackPanel>
+	</Grid>
+</Window>

@@ -1,0 +1,6 @@
+D:\Учеба\4_семестр\Паттерны\lab01\lab01\bin\Debug\lab01.exe
+D:\Учеба\4_семестр\Паттерны\lab01\lab01\bin\Debug\lab01.pdb
+D:\Учеба\4_семестр\Паттерны\lab01\lab01\obj\Debug\lab01.csproj.AssemblyReference.cache
+D:\Учеба\4_семестр\Паттерны\lab01\lab01\obj\Debug\lab01.csproj.CoreCompileInputs.cache
+D:\Учеба\4_семестр\Паттерны\lab01\lab01\obj\Debug\lab01.exe
+D:\Учеба\4_семестр\Паттерны\lab01\lab01\obj\Debug\lab01.pdb

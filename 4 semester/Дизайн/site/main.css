@@ -1,0 +1,331 @@
+@font-face {
+    font-family: 'Mansory';
+    src: url('fonts/Mansory.ttf') format('truetype');
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mansory', sans-serif;
+    user-select: none;
+}
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: #DEC391;
+}
+img {
+    pointer-events: none;
+}
+/*--------------HEADER---------------*/
+header {
+    background-color: #4B3F3F;
+    display: flex;
+    justify-content: space-between;
+}
+header h1 {
+    color: #DEC391;
+    font-weight: 400;
+    font-size: 50px;
+}
+ul li {
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 30px;
+    margin: 20px;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+/*------------------MAIN-------------------*/
+/*------------------MAIN-BANNER------------*/
+main .for-banner {
+    position: relative;
+}
+main section .banner {
+    width: 100%;
+    height: 100%;
+}
+main .for-banner button {
+    position: absolute;
+    color: #DEC391;
+    font-size: 20px;
+    background-color: #4B3F3F;
+    width: 200px;
+    height: 50px;
+    top: 30%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+main .for-banner h1 {
+    position: absolute;
+    font-size: 50px;
+    top: 10%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: #4B3F3F;
+    font-weight: 200;
+}
+main .for-banner h2 {
+    position: absolute;
+    font-size: 30px;
+    top: 19%;
+    left: 22.5%;
+    transform: translate(-50%, -50%);
+    color: #4B3F3F;
+    font-weight: 200;
+}
+/*------------------MAIN-CARS---------------*/
+main .for-cars {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -5px;
+    height: 250px;
+    background-image: url("images/back1.svg");
+    padding: 20px 0 0 0;
+}
+.for-cars h1 {
+    color: #DEC391;
+    font-weight: 200;
+    font-size: 70px;
+    margin-top: -80px;
+    margin-bottom: 0;
+}
+.for-cars h2 {
+    color: #DEC391;
+    font-weight: 200;
+    font-size: 25px;
+    margin-top: -17px;
+    margin-bottom: 30px;
+}
+.container-for-lines {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.line1 {
+    position: absolute;
+    height: 1px;
+    width: 300px;
+    background: linear-gradient(to right, white 0%, white 100%);
+    top: 50%;
+    left: -150%;
+}
+.line2 {
+    position: absolute;
+    height: 1px;
+    width: 300px;
+    background: linear-gradient(to left, white 100%, white 0%);
+    top: 50%;
+    left: 100%;
+}
+.container-for-lines button {
+    color: #DEC391;
+    font-size: 20px;
+    background: none;
+    width: 200px;
+    height: 50px;
+    text-decoration: none;
+    border: 1px solid #DEC391;
+    cursor: pointer;
+}
+/*CARDS*/
+main .for-sales {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("images/back2.svg");
+    color: #DEC391;
+    font-family: 'Mansory', sans-serif;
+    padding: 20px 0 20px 0;
+}
+.for-sales h1 {
+    color: #DEC391;
+    font-weight: 200;
+    font-size: 40px;
+}
+.for-sales h3 {
+    color: #DEC391;
+    font-weight: 200;
+}
+.for-sales img {
+    width: 300px;
+    height: 200px;
+}
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cards-container div div {
+    background-color: #4B3F3F;
+    margin-left: 3px;
+    margin-top: -4px;
+    padding-left: 10px;
+    width: 285px;
+    height: 50px;
+}
+.container-for-lines1 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.line3 {
+    position: absolute;
+    height: 1px;
+    width: 250px;
+    background: linear-gradient(to right, #DEC391 0%, #DEC391 100%);
+    top: 50%;
+    left: -145%;
+}
+.line4 {
+    position: absolute;
+    height: 1px;
+    width: 250px;
+    background: linear-gradient(to left, #DEC391 100%, #DEC391 0%);
+    top: 50%;
+    left: 135%;
+}
+.container-for-lines1 button {
+    color: #DEC391;
+    font-size: 20px;
+    background-color: #4B3F3F;
+    width: 230px;
+    height: 50px;
+    text-decoration: none;
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+/*------------------MAIN-NEWS---------------*/
+main .for-news {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("images/back3.svg");
+    font-family: 'Mansory', sans-serif;
+    padding: 20px 0 20px 0;
+    color: #DEC391;
+}
+.news-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.news-container div div {
+    background-color: #4B3F3F;
+    margin-left: 3px;
+    margin-top: -4px;
+    padding-left: 10px;
+    width: 285px;
+    height: 50px;
+}
+.news-container div div h3 {
+    padding-top: 10px;
+}
+.for-news h1 {
+    color: #DEC391;
+    font-weight: 200;
+    font-size: 40px;
+}
+.for-news h3 {
+    color: #DEC391;
+    font-weight: 200;
+}
+.for-news img {
+    width: 300px;
+    height: 200px;
+}
+.container-for-lines2 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.line5 {
+    position: absolute;
+    height: 1px;
+    width: 250px;
+    background: linear-gradient(to right, #DEC391 0%, #DEC391 100%);
+    top: 50%;
+    left: -145%;
+}
+.line6 {
+    position: absolute;
+    height: 1px;
+    width: 250px;
+    background: linear-gradient(to left, #DEC391 100%, #DEC391 0%);
+    top: 50%;
+    left: 135%;
+}
+.container-for-lines2 button {
+    color: #DEC391;
+    font-size: 20px;
+    background-color: #4B3F3F;
+    width: 230px;
+    height: 50px;
+    text-decoration: none;
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+/*------------------MAIN-FAQ---------------*/
+main .for-faq {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("images/back2.svg");
+    font-family: 'Mansory', sans-serif;
+    padding: 20px 0 20px 0;
+    color: #DEC391;
+}
+.for-faq span {
+    font-size: 25px;
+}
+.faq-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-container .first-faq {
+    margin-right: 10px;
+}
+/*------------------FOOTER---------------*/
+footer {
+    display: flex;
+    flex-direction: column;
+    background-image: url("images/back4.svg");
+    color: #DEC391;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+footer h1 {
+    font-size: 50px;
+    font-weight: 200;
+}
+footer .information-container {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+footer .information-container .messengers {
+    margin-left: -50px;
+}
+footer .information-container .categories {
+    margin-left: 300px;
+}
+footer ul li {
+    font-size: 20px;
+}

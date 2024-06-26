@@ -1,0 +1,45 @@
+<Window
+	x:Class = "application.InteractWindow.ForCustomer.UpdateCustomer"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:application.InteractWindow.ForCustomer"
+	mc:Ignorable = "d"
+	Title = "UpdateCustomer"
+	Height = "450"
+	Width = "800">
+	<Grid>
+		<StackPanel>
+			<ComboBox x:Name="customersBox" SelectionChanged="getID_Click">
+				
+			</ComboBox>
+			
+			<Label>Фамилия</Label>
+			<TextBox x:Name="secondName_text"/>
+			
+			<Label>Имя</Label>
+			<TextBox x:Name="firstName_text"/>
+			
+			<Label>Отчество</Label>
+			<TextBox x:Name="thirdName_text"/>
+			
+			<Label>Почта</Label>
+			<TextBox x:Name="mail_text"/>
+			
+			<Label>Телефон</Label>
+			<TextBox x:Name="phone_text"/>
+			
+			<Label>Страна</Label>
+			<TextBox x:Name="country_text"/>
+			
+			<Label>Адрес</Label>
+			<TextBox x:Name="address_text"/>
+			
+			<Label>Реквизиты</Label>
+			<TextBox x:Name="requisites_text"/>
+			
+			<Button Content="сохранить" Click="save_Click"/>
+		</StackPanel>
+	</Grid>
+</Window>

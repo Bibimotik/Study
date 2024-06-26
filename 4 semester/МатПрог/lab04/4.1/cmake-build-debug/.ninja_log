@@ -1,0 +1,12 @@
+# ninja log v5
+3	54	7347121643286389	CMakeFiles/4_1.dir/Levenshtein.cpp.obj	76ba1fd76fd01801
+0	399	7347121646756585	CMakeFiles/4_1.dir/main.cpp.obj	dce342da8b5ee450
+2	428	7347123995455982	CMakeFiles/4_1.dir/main.cpp.obj	dce342da8b5ee450
+6	442	7347123995606788	CMakeFiles/4_1.dir/Levenshtein.cpp.obj	76ba1fd76fd01801
+442	521	7347123996365985	4_1.exe	3cdff1da36144f72
+2	544	7353184822713156	CMakeFiles/4_1.dir/main.cpp.obj	dce342da8b5ee450
+5	545	7353184822713156	CMakeFiles/4_1.dir/Levenshtein.cpp.obj	76ba1fd76fd01801
+545	657	7353184823823146	4_1.exe	3cdff1da36144f72
+8	436	7353184989216400	CMakeFiles/4_1.dir/Levenshtein.cpp.obj	76ba1fd76fd01801
+3	447	7353184989336487	CMakeFiles/4_1.dir/main.cpp.obj	dce342da8b5ee450
+447	516	7353184989996516	4_1.exe	3cdff1da36144f72

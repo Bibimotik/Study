@@ -1,0 +1,55 @@
+<Window x:Class="lab04.ShowAllSpareParts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:lab04"
+        mc:Ignorable="d"
+        Icon="{StaticResource AppIcon}"
+        Title="ShowAllSpareParts" Height="500" Width="900" MinWidth="480">
+	<Window.Resources>
+		<Style BasedOn="{StaticResource {x:Type Label}}" 
+		       TargetType="{x:Type Label}">
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="HorizontalAlignment" Value="Left"/>
+			<Setter Property="FontWeight" Value="Medium"/>
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="FontFamily" Value="Mansory"/>
+			<Setter Property="Margin" Value="0,0,0,0"/>
+		</Style>
+	</Window.Resources>
+	<Border Background="#272537">
+		<Grid x:Name="YourLayoutGrid">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<StackPanel Orientation="Horizontal" Grid.Row="0">
+				<TextBox Name="SearchText" Width="200" Height="30" Margin="10" />
+				<Button Name="SearchButton" Content="{DynamicResource Search}" Width="80" Height="30" Margin="10" FontFamily="Mansory" Click="searchButton_Click"/>
+				<ComboBox x:Name="CategoryComboBox" VerticalAlignment="Center" Width="100" Height="30" FontFamily="Mansory">
+					<ComboBoxItem Content="{DynamicResource Price_Up}" FontFamily="Mansory"/>
+					<ComboBoxItem Content="{DynamicResource Price_Down}" FontFamily="Mansory"/>
+					<ComboBoxItem Content="{DynamicResource In_Stock1}" FontFamily="Mansory"/>
+					<ComboBoxItem Content="{DynamicResource Not_In_Stock1}" FontFamily="Mansory"/>
+				</ComboBox>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal" Grid.Row="1">
+                <Label Content="{DynamicResource Start_Price}"/>
+                <TextBox Name="StartPrice" Width="100" Height="30" Margin="10" />
+                <Label Content="{DynamicResource End_Price}"/>
+                <TextBox Name="EndPrice" Width="100" Height="30" Margin="10" />
+            </StackPanel>
+
+			<ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+				<StackPanel x:Name="StackPanelLayout" Orientation="Horizontal">
+					
+				</StackPanel>
+			</ScrollViewer>
+		</Grid>
+	</Border>
+</Window>

@@ -1,0 +1,15 @@
+﻿<Application x:Class="lab04.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:lab04"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+	    <ResourceDictionary>
+		    <ResourceDictionary.MergedDictionaries>
+		         <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+		         <ResourceDictionary Source="Theme/TextBlockTheme.xaml"/>
+		    </ResourceDictionary.MergedDictionaries>
+		    <BitmapImage x:Key="AppIcon" UriSource="D:\Учеба\4_семестр\ООП\lab04\lab04\Images\icon.png"/>
+         </ResourceDictionary>
+    </Application.Resources>
+</Application>

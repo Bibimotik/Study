@@ -1,0 +1,16 @@
+<Window
+	x:Class = "application.Administration.DeleteManager"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:application.Administration"
+	mc:Ignorable = "d"
+	Title = "DeleteManager" Height = "200" Width = "500">
+	<Grid>
+		<StackPanel>
+			<ComboBox x:Name="managers" SelectionChanged="change_Click"/>
+			<Button Content="удалить" x:Name="delete" Click="delete_Click"/>
+		</StackPanel>
+	</Grid>
+</Window>

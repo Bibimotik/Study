@@ -1,0 +1,22 @@
+<Window
+	x:Class = "application.UsersWindow.AdminWindow"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:application.UsersWindow"
+	mc:Ignorable = "d"
+	Title = "AdminWindow" Height = "300" Width = "500">
+	<Grid>
+		<StackPanel>
+			<Button Content="добавить менеджера" Click="open_AddManager"/>
+			<Button Content="удалить менеджера" Click="open_DeleteManager"/>
+			<Button Content="добавить механика" Click="open_AddMechanic"/>
+			<Button Content="удалить менеджера" Click="open_DeleteMechanic"/>
+			<Button Content="изменить цены" Click="open_ChangePriceCarSparePart"/>
+			<Button Content="сделать выписку о машинах" Click="create_extract_car"/>
+			<Button Content="сделать выписку о запчастях" Click="create_extract_sparepart"/>
+			<Button Content="добавить отзывы из json" Click="add_ReviewJson"/>
+		</StackPanel>
+	</Grid>
+</Window>

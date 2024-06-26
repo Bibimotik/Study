@@ -1,0 +1,44 @@
+<Window
+	x:Class = "application.InteractWindow.AddCar"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:application.InteractWindow"
+	mc:Ignorable = "d"
+	Title = "AddCar" Height = "450" Width = "800">
+	<Grid>
+		<StackPanel>
+			<Label>Label и Model ID</Label>
+			<ComboBox x:Name="labelModelBox">
+				
+			</ComboBox>
+				
+			<Label>Год</Label>
+			<TextBox x:Name="year_text"/>
+				
+			<Label>Пробег</Label>
+			<TextBox x:Name="mileage_text"/>
+				
+			<Label>Тип двигателя</Label>
+			<TextBox x:Name="enginetype_text"/>
+				
+			<Label>Объем двигателя</Label>
+			<TextBox x:Name="enginecapacity_text"/>
+				
+			<Label>Мощность</Label>
+			<TextBox x:Name="power_text"/>
+				
+			<Label>Цена</Label>
+			<TextBox x:Name="price_text"/>
+				
+			<Label>Описание</Label>
+			<TextBox x:Name="description_text"/>
+				
+			<Label>Статус</Label>
+			<CheckBox x:Name="status_text" IsChecked="False"/>
+			
+			<Button Content="сохранить" Click="add_car"/>
+		</StackPanel>
+	</Grid>
+</Window>

@@ -1,0 +1,34 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system = "clr-namespace:System;assembly=mscorlib">
+	<system:String x:Key="Title">МАШИНЫ</system:String>
+	<system:String x:Key="Add_product">Добавить продукт</system:String>
+	<system:String x:Key="Show_all_cars">Показать все машины</system:String>
+	<system:String x:Key="Show_all_spare_parts">Показать все запчасти</system:String>
+	
+	<system:String x:Key="Name">Название:</system:String>
+	<system:String x:Key="Short_Name">Краткое название:</system:String>
+	<system:String x:Key="Photo">Фото:</system:String>
+	<system:String x:Key="Select_File">Выберите файл</system:String>
+	<system:String x:Key="Category">Категория:</system:String>
+	<system:String x:Key="Price">Цена:</system:String>
+	<system:String x:Key="Rating">Рейтинг:</system:String>
+	<system:String x:Key="Color">Цвет:</system:String>
+	<system:String x:Key="Description">Описание:</system:String>
+	<system:String x:Key="In_Stock">В наличии:</system:String>
+	<system:String x:Key="Save">Сохранить</system:String>
+	
+	<system:String x:Key="Search">Поиск</system:String>
+	<system:String x:Key="Price_Up">Цена выс</system:String>
+	<system:String x:Key="Price_Down">Цена низ</system:String>
+	<system:String x:Key="In_Stock1">В наличии</system:String>
+	<system:String x:Key="Not_In_Stock1">Не в наличии</system:String>
+	
+	<system:String x:Key="Start_Price">Начальная цена:</system:String>
+	<system:String x:Key="End_Price">Конечная цена:</system:String>
+	
+	<system:String x:Key="Delete">Удалить</system:String>
+	<system:String x:Key="Edit">Изменить</system:String>
+	
+	<system:String x:Key="But">Тык</system:String>
+</ResourceDictionary>

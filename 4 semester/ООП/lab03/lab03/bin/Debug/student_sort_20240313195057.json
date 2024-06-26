@@ -1,0 +1,228 @@
+[
+  {
+    "SecondName": "EE",
+    "FirstName": "EE",
+    "ThirdName": "EE",
+    "Age": "суббота, 31 марта 2001 г.",
+    "Specialinost": "ПОИТ",
+    "BirthDate": "2001-03-31",
+    "Curs": 1,
+    "Group": "4",
+    "Ocenka": 0.1,
+    "Sex": "Мужской",
+    "Adres": null,
+    "Job": null
+  },
+  {
+    "SecondName": "WW",
+    "FirstName": "WW",
+    "ThirdName": "WW",
+    "Age": "пятница, 8 января 2021 г.",
+    "Specialinost": "ПОИБМС",
+    "BirthDate": "2021-01-08",
+    "Curs": 1,
+    "Group": "2",
+    "Ocenka": 0.1,
+    "Sex": "Мужской",
+    "Adres": {
+      "City": "WW",
+      "Index": "___-___",
+      "Street": "ww",
+      "House": "ww",
+      "Flat": "ww"
+    },
+    "Job": null
+  },
+  {
+    "SecondName": "УКК",
+    "FirstName": "УКК",
+    "ThirdName": "УКК",
+    "Age": "пятница, 16 июля 1954 г.",
+    "Specialinost": "ПОИТ",
+    "BirthDate": "1954-07-16",
+    "Curs": 1,
+    "Group": "3",
+    "Ocenka": 0.4,
+    "Sex": "Мужской",
+    "Adres": {
+      "City": "цц",
+      "Index": "222-323",
+      "Street": "цц",
+      "House": "цц",
+      "Flat": "цц"
+    },
+    "Job": {
+      "Company": "ццц",
+      "Post": "ццц",
+      "Experience": "2"
+    }
+  },
+  {
+    "SecondName": "цу",
+    "FirstName": "уц",
+    "ThirdName": "цу",
+    "Age": "пятница, 15 мая 2020 г.",
+    "Specialinost": "ДЭВИ",
+    "BirthDate": "2020-05-15",
+    "Curs": 1,
+    "Group": "4",
+    "Ocenka": 0.1,
+    "Sex": "Мужской",
+    "Adres": {
+      "City": "ууцу",
+      "Index": "323-234",
+      "Street": "ук",
+      "House": "уку",
+      "Flat": "ук"
+    },
+    "Job": {
+      "Company": "уук",
+      "Post": "уку",
+      "Experience": "3"
+    }
+  },
+  {
+    "SecondName": "ЫВЫВ",
+    "FirstName": "ЫЫВЫ",
+    "ThirdName": "ЫВЫВ",
+    "Age": "пятница, 13 марта 2020 г.",
+    "Specialinost": "ПОИБМС",
+    "BirthDate": "2020-03-13",
+    "Curs": 1,
+    "Group": "3",
+    "Ocenka": 0.1,
+    "Sex": "Мужской",
+    "Adres": {
+      "City": "УУУ",
+      "Index": "232-323",
+      "Street": "ццу",
+      "House": "цуцу",
+      "Flat": "цуцу"
+    },
+    "Job": {
+      "Company": "цуц",
+      "Post": "ццу",
+      "Experience": "2"
+    }
+  },
+  {
+    "SecondName": "ЫВЫВуу",
+    "FirstName": "ЫЫВЫук",
+    "ThirdName": "ЫВЫВууку",
+    "Age": "пятница, 13 марта 2020 г.",
+    "Specialinost": "ПОИБМС",
+    "BirthDate": "2020-03-13",
+    "Curs": 1,
+    "Group": "3",
+    "Ocenka": 0.1,
+    "Sex": "Мужской",
+    "Adres": {
+      "City": "УУУ",
+      "Index": "232-323",
+      "Street": "ццу",
+      "House": "цуцу",
+      "Flat": "цуцу"
+    },
+    "Job": {
+      "Company": "цуц",
+      "Post": "ццу",
+      "Experience": "2"
+    }
+  },
+  {
+    "SecondName": "ййй",
+    "FirstName": "ййй",
+    "ThirdName": "ййй",
+    "Age": "вторник, 20 февраля 2024 г.",
+    "Specialinost": "ПОИТ",
+    "BirthDate": "2024-02-20",
+    "Curs": 1,
+    "Group": "3",
+    "Ocenka": 0.2,
+    "Sex": "Мужской",
+    "Adres": null,
+    "Job": null
+  },
+  {
+    "SecondName": "укаигна",
+    "FirstName": "Укук",
+    "ThirdName": "атранрн",
+    "Age": "пятница, 19 ноября 2010 г.",
+    "Specialinost": "ПОИБМС",
+    "BirthDate": "2010-11-19",
+    "Curs": 1,
+    "Group": "6",
+    "Ocenka": 0.0,
+    "Sex": "Мужской",
+    "Adres": null,
+    "Job": null
+  },
+  {
+    "SecondName": "У",
+    "FirstName": "У",
+    "ThirdName": "У",
+    "Age": "среда, 21 февраля 2024 г.",
+    "Specialinost": "ПОИБМС",
+    "BirthDate": "2024-02-21",
+    "Curs": 2,
+    "Group": "7",
+    "Ocenka": 0.1,
+    "Sex": "Мужской",
+    "Adres": null,
+    "Job": null
+  },
+  {
+    "SecondName": "Банкузов",
+    "FirstName": "Михаил",
+    "ThirdName": "Олегович",
+    "Age": "пятница, 1 октября 2021 г.",
+    "Specialinost": "ПОИБМС",
+    "BirthDate": "2021-10-01",
+    "Curs": 2,
+    "Group": "7",
+    "Ocenka": 7.0,
+    "Sex": "Мужской",
+    "Adres": {
+      "City": "ЦЦ",
+      "Index": "222-323",
+      "Street": "ЦЦ",
+      "House": "ЦЦ",
+      "Flat": "ЦЦ"
+    },
+    "Job": null
+  },
+  {
+    "SecondName": "Карнильчик",
+    "FirstName": "Никита",
+    "ThirdName": "Олегович",
+    "Age": "суббота, 16 апреля 2005 г.",
+    "Specialinost": "ПОИТ",
+    "BirthDate": "2005-04-16",
+    "Curs": 2,
+    "Group": "6",
+    "Ocenka": 8.1,
+    "Sex": "Мужской",
+    "Adres": {
+      "City": "Борисов",
+      "Index": "323-232",
+      "Street": "укк 4",
+      "House": "3",
+      "Flat": "23"
+    },
+    "Job": null
+  },
+  {
+    "SecondName": "Априн",
+    "FirstName": "Укенг",
+    "ThirdName": "Цукап",
+    "Age": "четверг, 12 июля 2007 г.",
+    "Specialinost": "ПОИТ",
+    "BirthDate": "2007-07-12",
+    "Curs": 3,
+    "Group": "3",
+    "Ocenka": 4.34,
+    "Sex": "Женский",
+    "Adres": null,
+    "Job": null
+  }
+]

@@ -1,0 +1,36 @@
+<Window
+	x:Class = "application.InteractWindow.ForSparePart.UpdateSparePart"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:application.InteractWindow.ForSparePart"
+	mc:Ignorable = "d"
+	Title = "UpdateSparePart" Height = "450" Width = "800">
+	<Grid>
+		<StackPanel>
+			<ComboBox x:Name="sparepartsBox" SelectionChanged="getID_Click">
+				
+			</ComboBox>
+			
+			<Label>Название</Label>
+			<TextBox x:Name="label_text"/>
+			
+			<Label>Label и Model ID</Label>
+			<ComboBox x:Name="labelModelBox">
+				
+			</ComboBox>
+			
+			<Label>Описание</Label>
+			<TextBox x:Name="description_text"/>
+			
+			<Label>Количество</Label>
+			<TextBox x:Name="quantity_text"/>
+				
+			<Label>Статус</Label>
+			<CheckBox x:Name="status_text" IsChecked="False"/>
+				
+			<Button x:Name="save" Content="сохранить" Click="update_car"/>
+		</StackPanel>
+	</Grid>
+</Window>

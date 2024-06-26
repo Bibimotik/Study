@@ -1,0 +1,52 @@
+<Window
+	x:Class = "lab08.Edit"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:lab08"
+	mc:Ignorable = "d"
+	Title = "Edit" Height = "630" Width = "800">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="80"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		
+		<StackPanel>
+			<Label>ID студента для изменения</Label>
+			<TextBox x:Name="idstudent"/>
+			<Button Content="GET" Click="Get_Click"/>
+		</StackPanel>
+		
+		<StackPanel Grid.Row="1">
+			<Label Content="Full Name"/>
+			<TextBox x:Name="FullName" VerticalAlignment="Center"/>
+
+			<Label Content="Age"/>
+			<TextBox x:Name="Age" VerticalAlignment="Center"/>
+			
+			<Label Content="Specialty"/>
+			<TextBox x:Name="Specialty" VerticalAlignment="Center"/>
+			
+			<Label Content="Course"/>
+			<TextBox x:Name="Course" VerticalAlignment="Center"/>
+			
+			<Label Content="Group Name"/>
+			<TextBox x:Name="GroupName" VerticalAlignment="Center"/>
+			
+			<Label Content="Average Grade"/>
+			<TextBox x:Name="AverageGrade" VerticalAlignment="Center"/>
+			
+			<Label Content="Gender"/>
+			<TextBox x:Name="Gender" VerticalAlignment="Center"/>
+			
+			<Label Content="Address Id"/>
+			<TextBox x:Name="AddressId" VerticalAlignment="Center"/>
+			
+			<Image x:Name="studentImage" Width="100" Height="100"/>
+			
+			<Button Width="65" Content="save" HorizontalAlignment="Center" Margin="0,10,0,0" Click="Update"/>
+		</StackPanel>
+	</Grid>
+</Window>

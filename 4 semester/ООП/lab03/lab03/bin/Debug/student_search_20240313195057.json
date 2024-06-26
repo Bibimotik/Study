@@ -1,0 +1,56 @@
+[
+  {
+    "SecondName": "У",
+    "FirstName": "У",
+    "ThirdName": "У",
+    "Age": "среда, 21 февраля 2024 г.",
+    "Specialinost": "ПОИБМС",
+    "BirthDate": "2024-02-21",
+    "Curs": 2,
+    "Group": "7",
+    "Ocenka": 0.1,
+    "Sex": "Мужской",
+    "Adres": null,
+    "Job": null
+  },
+  {
+    "SecondName": "Банкузов",
+    "FirstName": "Михаил",
+    "ThirdName": "Олегович",
+    "Age": "пятница, 1 октября 2021 г.",
+    "Specialinost": "ПОИБМС",
+    "BirthDate": "2021-10-01",
+    "Curs": 2,
+    "Group": "7",
+    "Ocenka": 7.0,
+    "Sex": "Мужской",
+    "Adres": {
+      "City": "ЦЦ",
+      "Index": "222-323",
+      "Street": "ЦЦ",
+      "House": "ЦЦ",
+      "Flat": "ЦЦ"
+    },
+    "Job": null
+  },
+  {
+    "SecondName": "Карнильчик",
+    "FirstName": "Никита",
+    "ThirdName": "Олегович",
+    "Age": "суббота, 16 апреля 2005 г.",
+    "Specialinost": "ПОИТ",
+    "BirthDate": "2005-04-16",
+    "Curs": 2,
+    "Group": "6",
+    "Ocenka": 8.1,
+    "Sex": "Мужской",
+    "Adres": {
+      "City": "Борисов",
+      "Index": "323-232",
+      "Street": "укк 4",
+      "House": "3",
+      "Flat": "23"
+    },
+    "Job": null
+  }
+]

@@ -1,0 +1,144 @@
+﻿<Window x:Class="lab09.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab09"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" BorderThickness="1" BorderBrush="Black" Margin="20,0,20,90">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Label Content="Самолёт:" FontSize="20" Margin="0,0,0,20"/>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,40">
+                    <Label Content="id:" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100"/>
+                    <TextBox FontSize="16" Width="200" x:Name="AirplaneIDTextBox"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <Label Content="тип:" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100"/>
+                    <ComboBox FontSize="16" Width="200" x:Name="AirplaneTypeComboBox">
+                        <ComboBoxItem Content="пассажирский" IsSelected="True"/>
+                        <ComboBoxItem Content="военный"/>
+                        <ComboBoxItem Content="грузовой"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <Label Content="Грузоподъёмность:" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Width="200"/>
+                    <TextBox FontSize="16" Width="200" x:Name="CargoCapacityTextBox"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <Label Content="Год выпуска:" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Width="150"/>
+                    <TextBox FontSize="16" Width="200" x:Name="YearOfManufactureTextBox"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <Label Content="Кол-во мест:" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Width="150"/>
+                    <TextBox FontSize="16" Width="200" x:Name="PassengerSeatsTextBox"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,40">
+                    <Label Content="Модель:" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100"/>
+                    <TextBox FontSize="16" Width="200" x:Name="ModelTextBox"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,40">
+                    <Label Content="Дата последнего ТО:" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Width="200"/>
+                    <DatePicker FontSize="16" Width="200" x:Name="LastMaintenanceDatePicker"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <Button Content="Записать" FontSize="16" Width="100" Margin="0,0,10,0" Click="WriteAirplane"/>
+                    <Button Content="Удалить" FontSize="16" Width="100" Margin="0,0,10,0" Click="DeleteAirplane"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <Button Content="Обновить" FontSize="16" Width="100" Margin="0,0,10,0" Click="UpdateAirplane"/>
+                    <Button Content="Получить информацию" FontSize="16" Width="187" Click="GetInfoAirplane"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        <Border Grid.Column="1" BorderThickness="1" BorderBrush="Black" Padding="10" Height="590" VerticalAlignment="Top">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,-1">
+                <Label Content="Член экипажа:" FontSize="20" Margin="0,0,0,40"/>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,40">
+                    <Label Content="id:" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" />
+                    <TextBox FontSize="16" Width="200" Name="CrewId"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,40">
+                    <Label Content="ФИО:" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" />
+                    <TextBox FontSize="16" Width="200" Name="CrewName"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,40">
+                    <Label Content="Возраст:" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" />
+                    <TextBox FontSize="16" Width="200" Name="CrewAge"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,40">
+                    <Label Content="Стаж:" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" />
+                    <TextBox FontSize="16" Width="200" Name="CrewExp"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,40">
+                    <Label Content="Должность:" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" />
+                    <ComboBox FontSize="16" Width="200" x:Name="PositionComboBox">
+                        <ComboBoxItem Content="пилот" IsSelected="True"/>
+                        <ComboBoxItem Content="второй пилот"/>
+                        <ComboBoxItem Content="стюард(есса)"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <Label Content="ID самолёта:" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" />
+                    <TextBox FontSize="16" Width="200" Name="IdAirplain" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <Button Content="Записать" FontSize="16" Width="100" Margin="0,0,10,0" Click="WriteCrewMember"/>
+                    <Button Content="Удалить" FontSize="16" Width="100" Margin="0,0,10,0" Click="DeleteCrewMember"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <Button Content="Обновить" FontSize="16" Width="100" Margin="0,0,10,0" Click="UpdateCrewMember"/>
+                    <Button Content="Получить информацию" FontSize="16" Width="187" Click="GetInfoCrewMember"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        <StackPanel Grid.Column="2" Margin="0,0,0,1">
+            <DataGrid x:Name="CrewMembersGrid"  AutoGenerateColumns="False" Margin="10,10,10,20" Height="158">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="30"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding FullName}" Width="180"/>
+                    <DataGridTextColumn Header="Должность" Binding="{Binding Position}" Width="150"/>
+                    <DataGridTextColumn Header="Возраст" Binding="{Binding Age}" Width="60"/>
+                    <DataGridTextColumn Header="Стаж" Binding="{Binding Experience}" Width="60"/>
+                    <DataGridTextColumn Header="ID_самолёта" Binding="{Binding AirplaneID}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Content="Загрузить члена экипажа" Margin="30,0,30,10" Click="load_Crew"/>
+            <Button Content="отсортировать по возрастанию возраста" Margin="30,0,30,10" ButtonBase.Click="sort_Crew_Up"/>
+            <Button Content="отсортировать по убыванию опыта" Margin="30,0,30,10" Click="sort_Crew_Down"/>
+            <StackPanel Orientation="Horizontal" Margin="30,0,0,20">
+                <TextBlock Text="Введите имя:" Margin="0,0,10,0"/>
+                <TextBox Width="200" Margin="0,0,20,0" Name="EnterName"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="30,0,0,20">
+                <TextBlock Text="Введите возраст:" Margin="0,0,10,0"/>
+                <TextBox Width="179" Margin="0,0,20,0" Name="EnterAge"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="30,0,0,0">
+                <Button Content="найти" Margin="0,0,30,10" Width="50" Click="search"/>
+            </StackPanel>
+           
+
+
+            <DataGrid x:Name="AirplaneGrid" Grid.Column="2" AutoGenerateColumns="False" Margin="10,0,10,20" Height="156">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="30"/>
+                    <DataGridTextColumn Header="Тип" Binding="{Binding Type}" Width="90"/>
+                    <DataGridTextColumn Header="Модель" Binding="{Binding Model}" Width="100"/>
+                    <DataGridTextColumn Header="Вместимость" Binding="{Binding PassengerSeats}" Width="80"/>
+                    <DataGridTextColumn Header="Год производства" Binding="{Binding YearOfManufacture}" Width="100"/>
+                    <DataGridTextColumn Header="Грузоп-ть" Binding="{Binding CargoCapacity}" Width="80"/>
+                    <DataGridTextColumn Header="Дата последнего то" Binding="{Binding LastMaintenanceDate}" Width="150"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Content="Загрузить самолёты" Margin="30,0,30,10" Click="load_Airplanes"/>
+            <Button Content="отсортировать по возрастанию вместимости" Margin="30,0,30,10" ButtonBase.Click="sort_Airplanes"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+<Window
+	x:Class = "application.Administration.ChangePriceCarSparePart"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:application.Administration"
+	mc:Ignorable = "d"
+	Title = "ChangePriceCarSparePart" Height = "300" Width = "500">
+	<Grid>
+		<StackPanel>
+			<ComboBox x:Name="cars" SelectionChanged="changeCar_Click"/>
+			<TextBox x:Name="car_price"/>
+			<Button Content="сохранить цену машины" x:Name="saveCar" Click="save_car"/>
+			
+			<ComboBox x:Name="spareparts" SelectionChanged="changeSparePart_Click"/>
+			<TextBox x:Name="sparepart_price"/>
+			<Button Content="сохранить цену запчасти" x:Name="saveSparePart" Click="save_sparepart"/>
+		</StackPanel>
+	</Grid>
+</Window>

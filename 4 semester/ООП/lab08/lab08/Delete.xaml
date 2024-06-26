@@ -1,0 +1,19 @@
+<Window
+	x:Class = "lab08.Delete"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:lab08"
+	mc:Ignorable = "d"
+	Title = "Delete"
+	Height = "450"
+	Width = "800">
+	<Border>
+		<StackPanel>
+			<Label>ID студента для удаления</Label>
+			<TextBox x:Name="deleteid"></TextBox>
+			<Button Content="Delete" Click="Delete_Click"/>
+		</StackPanel>
+	</Border>
+</Window>

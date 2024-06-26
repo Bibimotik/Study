@@ -1,0 +1,25 @@
+<Window
+	x:Class = "application.InteractWindow.ForSparePart.ChangeStatusSparePart"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:application.InteractWindow.ForSparePart"
+	mc:Ignorable = "d"
+	Title = "ChangeStatusSparePart" Height = "450" Width = "800">
+	<Grid>
+		<StackPanel>
+			<ComboBox x:Name="sparepartsBox" SelectionChanged="getID_Click">
+				
+			</ComboBox>
+			
+			<Label>Измените количество</Label>
+			<TextBox x:Name="quantity_text"/>
+			
+			<Label>Измените статус</Label>
+			<CheckBox x:Name="status_text"/>
+			
+			<Button  x:Name="save" Content="сохранить" Click="save_Click"/>
+		</StackPanel>
+	</Grid>
+</Window>

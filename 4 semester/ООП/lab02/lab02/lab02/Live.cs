@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.IO;
+
+namespace lab02
+{
+    public partial class Live : Form
+    {
+        static Adres adres = new Adres();
+        
+        public Live()
+        {
+            InitializeComponent();
+        }
+        
+        private void saveAdres_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(city.Text) || string.IsNullOrWhiteSpace(index.Text) || string.IsNullOrWhiteSpace(street.Text) || string.IsNullOrWhiteSpace(house.Text) || string.IsNullOrWhiteSpace(flat.Text))
+            {
+                errorMessage.Text = "Заполните все поля.";
+            }
+            else
+            {
+                errorMessage.Text = "";
+                adres.City = city.Text;
+                adres.Index = index.Text;
+                adres.Flat = flat.Text;
+                adres.Street = street.Text;
+                adres.House = house.Text;
+                this.Close();
+            }
+        }
+        public static Adres GetAddress()
+        {
+            return adres;
+        }
+    }
+}

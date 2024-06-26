@@ -1,0 +1,32 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system = "clr-namespace:System;assembly=mscorlib">
+	<system:String x:Key="Title">CARS</system:String>
+	<system:String x:Key="Add_product">Add product</system:String>
+	<system:String x:Key="Show_all_cars">Show all cars</system:String>
+	<system:String x:Key="Show_all_spare_parts">Show all spare parts</system:String>
+	
+	<system:String x:Key="Name">Name:</system:String>
+	<system:String x:Key="Short_Name">Short name:</system:String>
+	<system:String x:Key="Photo">Photo:</system:String>
+	<system:String x:Key="Select_File">Select a file</system:String>
+	<system:String x:Key="Category">Category:</system:String>
+	<system:String x:Key="Price">Price:</system:String>
+	<system:String x:Key="Rating">Rating:</system:String>
+	<system:String x:Key="Color">Color:</system:String>
+	<system:String x:Key="Description">Description:</system:String>
+	<system:String x:Key="In_Stock">In stock:</system:String>
+	<system:String x:Key="Save">Save</system:String>
+	
+	<system:String x:Key="Search">Search</system:String>
+	<system:String x:Key="Price_Up">Price up</system:String>
+	<system:String x:Key="Price_Down">Price down</system:String>
+	<system:String x:Key="In_Stock1">In stock</system:String>
+	<system:String x:Key="Not_In_Stock1">Not in stock</system:String>
+	
+	<system:String x:Key="Start_Price">Start price:</system:String>
+	<system:String x:Key="End_Price">End price:</system:String>
+	
+	<system:String x:Key="Delete">Delete</system:String>
+	<system:String x:Key="Edit">Edit</system:String>
+</ResourceDictionary>

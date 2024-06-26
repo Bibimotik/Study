@@ -1,0 +1,32 @@
+<Window
+	x:Class = "application.InteractWindow.ForOrders.ChangeStatusOrderSparePart"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:application.InteractWindow.ForOrders"
+	mc:Ignorable = "d"
+	Title = "ChangeStatusOrderSparePart" Height = "450" Width = "800">
+	<Grid>
+		<StackPanel>
+			<ComboBox x:Name="customerBox" SelectionChanged="getIdCustomer_Click">
+				
+			</ComboBox>
+			
+			<ComboBox x:Name="ordersBox" SelectionChanged="getIdOrder_Click">
+				
+			</ComboBox>
+			
+			<Label>Фамилия клиента: </Label>
+			<TextBlock x:Name="secondnameCustomer_text"/>
+			
+			<Label>Заказанная запчасть: </Label>
+			<TextBlock x:Name="car_text"/>
+			
+			<Label>Одобрено: </Label>
+			<CheckBox x:Name="status_text"/>
+			
+			<Button Content="сохранить" x:Name="save" Click="save_Click"/>
+		</StackPanel>
+	</Grid>
+</Window>

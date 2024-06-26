@@ -1,0 +1,16 @@
+<Window
+	x:Class = "application.Administration.DeleteMechanic"
+	xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local = "clr-namespace:application.Administration"
+	mc:Ignorable = "d"
+	Title = "DeleteMechanic" Height = "450" Width = "800">
+	<Grid>
+		<StackPanel>
+			<ComboBox x:Name="mechanics" SelectionChanged="change_Click"/>
+			<Button Content="удалить" x:Name="delete" Click="delete_Click"/>
+		</StackPanel>
+	</Grid>
+</Window>

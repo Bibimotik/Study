@@ -1,0 +1,30 @@
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\bin\Debug\lab02.exe.config
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\bin\Debug\lab02.exe
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\bin\Debug\lab02.pdb
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.csproj.AssemblyReference.cache
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.Properties.Resources.resources
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.csproj.GenerateResource.cache
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.csproj.CoreCompileInputs.cache
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.exe
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.pdb
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\bin\Debug\Newtonsoft.Json.dll
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\bin\Debug\Newtonsoft.Json.xml
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.csproj.CopyComplete
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.Person.resources
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.Live.resources
+D:\Учеба\4 семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.Work.resources
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\bin\Debug\lab02.exe.config
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\bin\Debug\lab02.exe
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\bin\Debug\lab02.pdb
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\bin\Debug\Newtonsoft.Json.dll
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\bin\Debug\Newtonsoft.Json.xml
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.csproj.AssemblyReference.cache
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.Person.resources
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.Live.resources
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.Properties.Resources.resources
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.csproj.GenerateResource.cache
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.csproj.CoreCompileInputs.cache
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.csproj.CopyComplete
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.exe
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.pdb
+D:\Учеба\4_семестр\ООП\lab02\lab02\lab02\obj\Debug\lab02.Work.resources

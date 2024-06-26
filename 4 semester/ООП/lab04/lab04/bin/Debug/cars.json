@@ -1,0 +1,79 @@
+[
+  {
+    "Name": "Bentley",
+    "Short_Name": "Contenental",
+    "Photo": "D:\\Учеба\\4_семестр\\ООП\\lab04\\lab04\\Images\\bentley.png",
+    "Category": "Машина",
+    "Price": 145700,
+    "Rating": 5,
+    "Color": "Blue",
+    "Description": "Good\r\n",
+    "In_Stock": 0
+  },
+  {
+    "Name": "Maserati",
+    "Short_Name": "GT",
+    "Photo": "D:\\Учеба\\4_семестр\\ООП\\lab04\\lab04\\Images\\maseratiRed.png",
+    "Category": "Машина",
+    "Price": 127000,
+    "Rating": 5,
+    "Color": "Red",
+    "Description": "Very Cool\r\n",
+    "In_Stock": 1
+  },
+  {
+    "Name": "Maserati",
+    "Short_Name": "GT",
+    "Photo": "D:\\Учеба\\4_семестр\\ООП\\lab04\\lab04\\Images\\maseratiBlack.png",
+    "Category": "Машина",
+    "Price": 147000,
+    "Rating": 4,
+    "Color": "Black",
+    "Description": "Very Cool\r\n",
+    "In_Stock": 0
+  },
+  {
+    "Name": "Mercedes",
+    "Short_Name": "CLS",
+    "Photo": "D:\\Учеба\\4_семестр\\ООП\\lab04\\lab04\\Images\\mercedes.png",
+    "Category": "Машина",
+    "Price": 55800,
+    "Rating": 5,
+    "Color": "White",
+    "Description": "Mercedes benz good car\r\n",
+    "In_Stock": 0
+  },
+  {
+    "Name": "BMW",
+    "Short_Name": "M5 F10",
+    "Photo": "D:\\Учеба\\4_семестр\\ООП\\lab04\\lab04\\Images\\m5f10.png",
+    "Category": "Машина",
+    "Price": 44780,
+    "Rating": 4,
+    "Color": "White",
+    "Description": "Cool\r\n",
+    "In_Stock": 1
+  },
+  {
+    "Name": "Maserati",
+    "Short_Name": "GT",
+    "Photo": "D:\\Учеба\\4_семестр\\ООП\\lab04\\lab04\\Images\\maseratiYellow.png",
+    "Category": "Машина",
+    "Price": 135000,
+    "Rating": 4,
+    "Color": "Yellow",
+    "Description": "Very Cool\r\n\r\n",
+    "In_Stock": 1
+  },
+  {
+    "Name": "BMW",
+    "Short_Name": "M1",
+    "Photo": "D:\\Учеба\\4_семестр\\ООП\\lab04\\lab04\\Images\\bmwM1.png",
+    "Category": "Машина",
+    "Price": 134000,
+    "Rating": 4,
+    "Color": "Blue",
+    "Description": "Car Good Very Cool\r\n\r\n",
+    "In_Stock": 1
+  }
+]

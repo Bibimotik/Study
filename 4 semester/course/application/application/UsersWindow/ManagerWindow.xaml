@@ -1,0 +1,35 @@
+﻿<Window x:Class="application.ManagerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:application"
+        mc:Ignorable="d"
+        Title="ManagerWindow" Height="400" Width="500">
+    <Grid Background="Tan">
+	    <StackPanel>
+		    <StackPanel Orientation="Horizontal">
+				    <DatePicker x:Name="start_date"/>
+				    <DatePicker x:Name="end_date"/>
+				    <Button Content="сумма продаж за период" Click="calculate_total_price"/>
+			    </StackPanel>
+			    <Button Content="добавить машину" Click="open_AddCar"/>
+			    <Button Content="обновить машину" Click="open_UpdateCar"/>
+			    <Button Content="обновить статус машины" Click="open_ChangeStatusCar" Margin="0 0 0 10"/>
+			    
+			    <Button Content="добавить запчасть" Click="open_AddSparePart"/>
+			    <Button Content="обновить запчасть" Click="open_UpdateSparePart"/>
+			    <Button Content="обновить статус запчасти" Click="open_ChangeStatusSparePart" Margin="0 0 0 10"/>
+			    
+			    <Button Content="добавить клиента" Click="open_AddCustomer"/>
+			    <Button Content="обновить клиента" Click="open_UpdateCustomer" Margin="0 0 0 10"/>
+			    
+			    <Button Content="учет машин" Click="open_CarBalances"/>
+			    <Button Content="учет запчастей" Click="open_SparePartsBalances"/>
+			    <Button Content="учет клиентов" Click="open_CustomerBalances" Margin="0 0 0 10"/>
+			    
+			    <Button Content="обновить статус заказа машины" Click="open_ChangeStatusOrderCar"/>
+			    <Button Content="обновить статус заказа запчасти" Click="open_ChangeStatusOrderSparePart" Margin="0 0 0 10"/>
+	    </StackPanel>
+    </Grid>
+</Window>

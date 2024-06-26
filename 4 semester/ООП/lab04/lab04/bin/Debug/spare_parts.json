@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Wing1",
+    "short_name": "GT",
+    "photo": "D:\\Учеба\\4_семестр\\ООП\\lab04\\lab04\\Images\\wing.png",
+    "category": "Запчасти",
+    "price": 350,
+    "rating": 3,
+    "color": "Cuprum",
+    "description": "Good Very Cool\r\n",
+    "in_stock": 1
+  },
+  {
+    "name": "Wing2",
+    "short_name": "GT",
+    "photo": "D:\\Учеба\\4_семестр\\ООП\\lab04\\lab04\\Images\\wing.png",
+    "category": "Запчасти",
+    "price": 459,
+    "rating": 4,
+    "color": "Silver",
+    "description": "Good Very Cool\r\n",
+    "in_stock": 1
+  },
+  {
+    "name": "Wing3",
+    "short_name": "GT",
+    "photo": "D:\\Учеба\\4_семестр\\ООП\\lab04\\lab04\\Images\\wing.png",
+    "category": "Запчасти",
+    "price": 800,
+    "rating": 5,
+    "color": "Gold",
+    "description": "Good Very Cool\r\n",
+    "in_stock": 0
+  }
+]

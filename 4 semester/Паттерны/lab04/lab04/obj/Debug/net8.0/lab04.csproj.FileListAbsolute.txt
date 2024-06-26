@@ -1,0 +1,14 @@
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\bin\Debug\net8.0\lab04.exe
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\bin\Debug\net8.0\lab04.deps.json
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\bin\Debug\net8.0\lab04.runtimeconfig.json
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\bin\Debug\net8.0\lab04.dll
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\bin\Debug\net8.0\lab04.pdb
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\obj\Debug\net8.0\lab04.GeneratedMSBuildEditorConfig.editorconfig
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\obj\Debug\net8.0\lab04.AssemblyInfoInputs.cache
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\obj\Debug\net8.0\lab04.AssemblyInfo.cs
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\obj\Debug\net8.0\lab04.csproj.CoreCompileInputs.cache
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\obj\Debug\net8.0\lab04.dll
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\obj\Debug\net8.0\refint\lab04.dll
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\obj\Debug\net8.0\lab04.pdb
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\obj\Debug\net8.0\lab04.genruntimeconfig.cache
+D:\Учеба\4_семестр\Паттерны\lab04\lab04\obj\Debug\net8.0\ref\lab04.dll
