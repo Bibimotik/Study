@@ -1,0 +1,76 @@
+-- 6 Создайте таблицу и триггер, который запишет дату изменения и предыдущие данные в таблицу AUDIT при изменении в таблице SALESREPS
+CREATE TABLE AUDIT (
+    EMPL_NUM INTEGER,
+    NAME TEXT,
+    AGE INTEGER,
+    REP_OFFICE INTEGER,
+    TITLE TEXT,
+    HIRE_DATE TEXT,
+    MGR INTEGER,
+    QUOTA REAL,
+    SALES REAL,
+    CHANGE_DATE TEXT
+);
+
+CREATE TRIGGER audit_trigger AFTER UPDATE ON SALESREPS
+FOR EACH ROW
+BEGIN
+    INSERT INTO AUDIT (EMPL_NUM, NAME, AGE, REP_OFFICE, TITLE, HIRE_DATE, MGR, QUOTA, SALES, CHANGE_DATE) 
+    VALUES (OLD.EMPL_NUM, OLD.NAME, OLD.AGE, OLD.REP_OFFICE, OLD.TITLE, OLD.HIRE_DATE, OLD.MANAGER, OLD.QUOTA, OLD.SALES, datetime('now'));
+END;
+
+select NAME from SALESREPS;
+UPDATE SALESREPS SET NAME = 'TEST2' WHERE TITLE = 'TEST1';
+SELECT * FROM AUDIT;
+
+-- 7 Создайте триггер, который при добавлении данных в представление, созданное вами в п.1.2, записывает данные в таблицы SALESREPS и OFFICES
+CREATE TRIGGER empls_offices_trigger INSTEAD OF INSERT ON EmployeesAndOffices
+BEGIN
+
+INSERT INTO OFFICES (OFFICE, CITY, REGION, MGR, TARGET, SALES)
+  SELECT 28, NEW.CITY, NEW.REGION, 106, 888888, 777777;
+  
+  INSERT INTO SALESREPS (EMPL_NUM, NAME, AGE, REP_OFFICE, TITLE, HIRE_DATE, MANAGER, QUOTA, SALES)
+  SELECT 199, NEW.NAME, 35, 23, 'Sales Rep', date('now'), 106, 200000, 188000;
+END;
+
+INSERT INTO EmployeesAndOffices (NAME, CITY, REGION) VALUES ('Nikita eirjiwfn', 'Minsk dwof', 'Eastern');
+select * from OFFICES; 
+select * from SALESREPS;
+select * from EmployeesAndOffices;
+
+
+-- 8 Продемонстрируйте применение транзакций в SQLite: в одной транзакции добавьте заказ и пересчитайте поле SALES для соответствующего сотрудника
+begin EXCLUSIVE TRANSACTION;
+select sum(ORDERS.AMOUNT) from ORDERS where REP = 110;
+insert into ORDERS values(188039,'2008-01-30',2107,110,'ACI','4100Z',9,22500.00);
+select sum(ORDERS.AMOUNT) from ORDERS where REP = 110;
+commit;
+
+-- 9 Продемонстрируйте применение вложенных транзакций в SQLite: во внешней транзакции добавьте сотрудника, во внутренней транзакции – несколько его заказов
+BEGIN TRANSACTION A;
+	INSERT INTO SALESREPS VALUES (140,'Nikita Papko',49,22,'Sales Rep','2006-11-14',108,300000.00,186042.00);
+	BEGIN TRANSACTION B;
+		INSERT INTO ORDERS VALUES (124456, '2008-01-30', 2108, 120, 'ACI', '4100Z', 10, 23500.00);
+	COMMIT TRANSACTION B;
+COMMIT TRANSACTION A;
+select * from SALESREPS;
+
+-- 10 Продемонстрируйте применение точек сохранения
+BEGIN TRANSACTION;
+
+insert into ORDERS values(189939,'2024-04-16',2107,110,'ACI','4100Z',9,22500.00);
+
+select * FROM Orders where order_date = '2024-04-16';
+SAVEPOINT my_savepoint;
+insert into ORDERS values(180939,'2024-04-16',2107,110,'ACI','4100Z',9,22500.00);
+
+insert into ORDERS values(900039,'2024-04-16',2107,110,'ACI','4100Z',9,22500.00);
+
+ROLLBACK TO my_savepoint;
+
+-- Продолжение выполнения транзакции
+-- Вставка других данных или выполнение других операций
+
+-- Завершение транзакции
+COMMIT;

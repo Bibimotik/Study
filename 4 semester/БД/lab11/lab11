@@ -1,0 +1,247 @@
+--3.1 Выбрать заказы, сделанные в определенный период
+SELECT * 
+FROM Orders 
+WHERE order_date BETWEEN '2007-1-1' AND '2007-12-31';
+
+--3.2 Выбрать сотрудника, у которого нет менеджера
+SELECT *
+FROM SALESREPS
+WHERE MANAGER IS NULL;
+
+--3.3 Выбрать офисы из региона, который начинается на East
+SELECT *
+FROM OFFICES
+WHERE REGION LIKE 'East%';
+
+--3.4 Выбрать всех продукты с ценой больше определенного значения и отсортировать в порядке убывания цены
+SELECT * 
+FROM Products 
+WHERE Price > 1313
+ORDER BY Price DESC;
+
+--3.5 Выбрать фамилии и даты найма всех сотрудников и отсортировать по возрасту
+SELECT NAME, HIRE_DATE
+FROM SALESREPS 
+ORDER BY AGE;
+
+--3.6 Выбрать все заказы и отсортировать вначале по стоимости по убыванию, а затем по количеству заказанного по возрастанию
+SELECT * 
+FROM ORDERS 
+ORDER BY AMOUNT DESC, QTY;
+
+--3.7 Выбрать 5 самых дорогих товаров
+SELECT *
+FROM PRODUCTS 
+ORDER BY PRICE DESC 
+LIMIT 5;
+
+--3.8 Выбрать 11 покупателей с самым высоким кредитным лимитом
+SELECT * 
+FROM CUSTOMERS 
+ORDER BY CREDIT_LIMIT DESC 
+LIMIT 11;
+
+--3.9 Выбрать сотрудников с 4 по 7, отсортированных по дате найма
+SELECT * 
+FROM (
+    SELECT ROW_NUMBER() OVER (ORDER BY HIRE_DATE) as ROW_NUM, *
+    FROM SALESREPS
+) 
+WHERE ROW_NUM BETWEEN 4 AND 7;
+
+--3.10 Выбрать сотрудников с 4 по 7, отсортированных по возрасту и тех, кто с ними одного возраста
+SELECT ROW_NUM, * FROM (
+    SELECT *, ROW_NUMBER() OVER (ORDER BY AGE) as row_num FROM SALESREPS
+)
+WHERE AGE IN (
+    SELECT AGE FROM (
+        SELECT  ROW_NUMBER() OVER (ORDER BY AGE) as row_num, AGE FROM SALESREPS
+    )
+    WHERE row_num BETWEEN 4 AND 8
+);
+
+--3.11 Выбрать уникальные товары в заказах
+SELECT DISTINCT PRODUCT 
+FROM ORDERS;
+
+--3.12 Подсчитать количество заказов для каждого покупателя
+SELECT CUST, COUNT(*) 
+FROM ORDERS 
+GROUP BY CUST;
+
+--3.13 Подсчитать среднюю цену заказа для каждого сотрудника
+SELECT REP, AVG(AMOUNT) 
+FROM ORDERS 
+GROUP BY REP;
+
+--3.14 Найти сотрудников, у которых есть заказ стоимости выше определенного значения
+SELECT DISTINCT CUST, AMOUNT
+FROM ORDERS
+WHERE  AMOUNT > 13130;
+
+--3.15 Найти количество продуктов для каждого производителя
+SELECT MFR_ID, COUNT(*) 
+FROM PRODUCTS 
+GROUP BY MFR_ID;
+
+--3.16 Найти самый дорогой товар каждого производителя
+SELECT MFR_ID,  DESCRIPTION, MAX(PRICE) 
+FROM PRODUCTS 
+GROUP BY MFR_ID;
+
+--3.17 Найти покупателей и их заказы
+SELECT C.COMPANY, P.DESCRIPTION, P.MFR_ID, O.QTY, O.AMOUNT
+FROM CUSTOMERS C
+JOIN ORDERS O ON C.CUST_NUM = O.CUST
+JOIN PRODUCTS P ON O.PRODUCT = P.PRODUCT_ID;
+
+--3.18 Найти сотрудников, которые не оформили ни одного заказа
+SELECT * 
+FROM SALESREPS 
+WHERE EMPL_NUM NOT IN (SELECT DISTINCT REP FROM ORDERS);
+
+--3.19 Найти сотрудников одного возраста
+SELECT * 
+FROM SALESREPS S1
+WHERE EXISTS (SELECT * FROM SALESREPS S2 WHERE S1.AGE = S2.AGE AND S1.EMPL_NUM <> S2.EMPL_NUM );
+
+--3.20 Найти описания товаров, приобретенные покупателем First Corp
+SELECT P.DESCRIPTION
+FROM PRODUCTS P
+JOIN ORDERS O ON P.PRODUCT_ID = O.PRODUCT
+JOIN CUSTOMERS C ON O.CUST = C.CUST_NUM
+WHERE C.COMPANY = 'First Corp.';
+
+--3.21 Выбрать заказы, сумма которых больше среднего значения
+SELECT * 
+FROM ORDERS 
+WHERE AMOUNT > (SELECT AVG(AMOUNT) FROM ORDERS);
+
+--3.22 Выбрать сотрудников, которые обслуживали одних и тех же покупателей
+SELECT DISTINCT S1.* 
+FROM SALESREPS S1
+JOIN ORDERS O1 ON S1.EMPL_NUM = O1.REP
+WHERE EXISTS (SELECT * FROM SALESREPS S2 JOIN ORDERS O2 ON S2.EMPL_NUM = O2.REP WHERE S1.EMPL_NUM <> S2.EMPL_NUM AND O1.CUST = O2.CUST);
+
+--3.23 Выбрать покупателей, сделавших заказы в один день
+SELECT C1.* , O1.ORDER_DATE
+FROM CUSTOMERS C1
+JOIN ORDERS O1 ON C1.CUST_NUM = O1.CUST
+WHERE EXISTS (SELECT * FROM CUSTOMERS C2 JOIN ORDERS O2 ON C2.CUST_NUM = O2.CUST WHERE C1.CUST_NUM <> C2.CUST_NUM AND O1.ORDER_DATE = O2.ORDER_DATE);
+
+--3.24 Подсчитать, на какую сумму каждый офис выполнил заказы, и отсортировать их в порядке убывания
+SELECT OFFICES.OFFICE, SUM(ORDERS.AMOUNT) AS TOTAL_AMOUNT
+FROM OFFICES
+JOIN SALESREPS ON OFFICES.OFFICE = SALESREPS.REP_OFFICE
+JOIN ORDERS ON SALESREPS.EMPL_NUM = ORDERS.REP
+GROUP BY OFFICES.OFFICE
+ORDER BY TOTAL_AMOUNT DESC;
+
+--3.25 Выбрать сотрудников, которые являются начальниками
+SELECT * 
+FROM SALESREPS 
+WHERE EMPL_NUM IN (SELECT MANAGER FROM SALESREPS);
+
+--SELECT * FROM SALESREPS;
+
+--3.26 Выбрать сотрудников, которые не являются начальниками
+SELECT * 
+FROM SALESREPS 
+WHERE EMPL_NUM NOT IN (SELECT MANAGER FROM SALESREPS WHERE MANAGER IS NOT NULL);
+
+--3.27 Выбрать все продукты, продаваемые сотрудниками из восточного региона
+SELECT DISTINCT P.* 
+FROM PRODUCTS P
+JOIN ORDERS O ON P.PRODUCT_ID = O.PRODUCT
+JOIN SALESREPS S ON O.REP = S.EMPL_NUM
+JOIN OFFICES OFF ON S.REP_OFFICE = OFF.OFFICE
+WHERE OFF.REGION = 'Eastern';
+
+--3.28 Выбрать фамилии и даты найма всех сотрудников и отсортировать по сумме заказов, которые они выполнили
+SELECT S.NAME, S.HIRE_DATE
+FROM SALESREPS S
+JOIN ORDERS O ON S.EMPL_NUM = O.REP
+GROUP BY S.EMPL_NUM
+ORDER BY SUM(O.AMOUNT);
+
+--3.29 Выбрать заказы, выполненные сотрудниками из региона Eastern, и отсортировать по количеству заказанного по возрастанию
+SELECT O.* 
+FROM ORDERS O
+JOIN SALESREPS S ON O.REP = S.EMPL_NUM
+JOIN OFFICES OFF ON S.REP_OFFICE = OFF.OFFICE
+WHERE OFF.REGION = 'Eastern'
+ORDER BY O.QTY ASC;
+
+--3.30 Выбрать товары, которые дороже товаров, заказанных компанией First Corp
+SELECT P.*
+FROM PRODUCTS P
+INNER JOIN ORDERS O ON P.MFR_ID = O.MFR AND P.PRODUCT_ID = O.PRODUCT
+INNER JOIN CUSTOMERS C ON O.CUST = C.CUST_NUM
+AND P.PRICE > (
+  SELECT MAX(P2.PRICE)
+  FROM PRODUCTS P2
+  INNER JOIN ORDERS O2 ON P2.MFR_ID = O2.MFR AND P2.PRODUCT_ID = O2.PRODUCT
+  INNER JOIN CUSTOMERS C2 ON O2.CUST = C2.CUST_NUM
+  WHERE C2.COMPANY = 'First Corp.'
+)
+
+--3.31 Выбрать товары, которые не входят в товары, заказанные компанией First Corp
+SELECT P.* 
+FROM PRODUCTS P
+WHERE P.PRODUCT_ID NOT IN (
+  SELECT O.PRODUCT 
+  FROM ORDERS O 
+  JOIN CUSTOMERS C ON O.CUST = C.CUST_NUM 
+  WHERE C.COMPANY = 'First Corp'
+);
+
+--3.32 Выбрать товары покупателя, которые по стоимости ниже среднего значения цены товара по этому покупателю
+SELECT O.* 
+FROM ORDERS O
+JOIN CUSTOMERS C ON O.CUST = C.CUST_NUM
+WHERE O.AMOUNT < (SELECT AVG(AMOUNT) FROM ORDERS WHERE CUST = C.CUST_NUM);
+
+--3.33 Найти сотрудников, кто выполнял заказы в 2008, но не выполнял в 2007
+SELECT DISTINCT S1.NAME 
+FROM SALESREPS S1
+JOIN ORDERS O1 ON S1.EMPL_NUM = O1.REP
+WHERE strftime('%Y', O1.ORDER_DATE) = '2008'
+AND S1.EMPL_NUM NOT IN (
+    SELECT S2.EMPL_NUM
+    FROM SALESREPS S2
+    JOIN ORDERS O2 ON S2.EMPL_NUM = O2.REP
+    WHERE strftime('%Y', O2.ORDER_DATE) = '2007'
+);
+
+SELECT DISTINCT S.NAME
+FROM SALESREPS S
+LEFT JOIN ORDERS O1 ON S.EMPL_NUM = O1.REP AND strftime('%Y', O1.ORDER_DATE) = '2008'
+LEFT JOIN ORDERS O2 ON S.EMPL_NUM = O2.REP AND strftime('%Y', O2.ORDER_DATE) = '2007'
+WHERE O1.ORDER_NUM IS NOT NULL AND O2.ORDER_NUM IS NULL;
+
+--3.34 Найти организации, которые не делали заказы в 2008, но делали в 2007
+SELECT C.company
+FROM CUSTOMERS C
+WHERE EXISTS (SELECT * FROM ORDERS WHERE CUST = C.CUST_NUM AND strftime('%Y', ORDER_DATE) = '2007') 
+AND NOT EXISTS (SELECT * FROM ORDERS WHERE CUST = C.CUST_NUM AND strftime('%Y', ORDER_DATE) = '2008');
+
+SELECT DISTINCT C.company
+FROM CUSTOMERS C
+JOIN ORDERS O1 ON C.CUST_NUM = O1.CUST AND strftime('%Y', O1.ORDER_DATE) = '2007'
+WHERE NOT EXISTS (
+    SELECT *
+    FROM ORDERS O2
+    WHERE C.CUST_NUM = O2.CUST AND strftime('%Y', O2.ORDER_DATE) = '2008'
+);
+
+--3.35 Найти организации, которые делали заказы в 2008 и в 2007
+SELECT C.company
+FROM CUSTOMERS C
+WHERE EXISTS (SELECT * FROM ORDERS WHERE CUST = C.CUST_NUM AND strftime('%Y', ORDER_DATE) = '2007') 
+AND  EXISTS (SELECT * FROM ORDERS WHERE CUST = C.CUST_NUM AND strftime('%Y', ORDER_DATE) = '2008');
+
+SELECT DISTINCT C.company
+FROM CUSTOMERS C
+JOIN ORDERS O1 ON C.CUST_NUM = O1.CUST
+JOIN ORDERS O2 ON C.CUST_NUM = O2.CUST
+WHERE strftime('%Y', O1.ORDER_DATE) = '2007' AND   strftime('%Y', O2.ORDER_DATE) = '2008';

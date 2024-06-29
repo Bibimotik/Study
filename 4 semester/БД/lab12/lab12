@@ -1,0 +1,177 @@
+-- 1 Получите список объектов БД
+SELECT name, type  FROM sqlite_master;
+
+-- 2.1 содержите сведения о покупателях, у которых есть заказы выше определенной суммы
+CREATE VIEW CustomersWithHighOrders AS
+SELECT C.* 
+FROM CUSTOMERS C
+JOIN ORDERS O ON C.CUST_NUM = O.CUST
+WHERE O.AMOUNT > 1000;
+
+SELECT * FROM CustomersWithHighOrders;
+
+-- 2.2 содержите сведения о сотрудниках и их офисах
+CREATE VIEW EmployeesAndOffices AS
+SELECT S.NAME, O.*
+FROM SALESREPS S
+JOIN OFFICES O ON S.REP_OFFICE = O.OFFICE;
+
+SELECT * FROM EmployeesAndOffices;
+
+-- 2.3 содержите сведения о заказах, оформленных в 2008 году
+CREATE VIEW Orders2008 AS
+SELECT * 
+FROM ORDERS 
+WHERE strftime('%Y', ORDER_DATE) = '2008';
+
+SELECT * FROM Orders2008;
+
+-- 2.4 содержите сведения о сотрудниках, которые не оформили ни одного заказа
+CREATE VIEW EmployeesWithoutOrders AS
+SELECT S.*
+FROM SALESREPS S
+LEFT JOIN ORDERS O ON S.EMPL_NUM = O.REP
+WHERE O.ORDER_NUM IS NULL;
+
+SELECT * FROM EmployeesWithoutOrders;
+
+-- 2.5 содержите сведения о самых популярных товарах
+CREATE VIEW PopularProducts AS
+SELECT P.*, COUNT(*) as OrderCount
+FROM PRODUCTS P
+JOIN ORDERS O ON P.MFR_ID = O.MFR AND P.PRODUCT_ID = O.PRODUCT
+GROUP BY P.MFR_ID, P.PRODUCT_ID
+ORDER BY OrderCount DESC;
+
+SELECT * FROM PopularProducts;
+
+-- 3 Создайте временную таблицу, добавьте в нее данные. Продемонстрируйте время существования временной таблицы
+CREATE TEMP TABLE TempTable AS SELECT * FROM PRODUCTS;
+
+INSERT INTO TempTable SELECT * FROM PRODUCTS;
+
+SELECT * FROM TempTable;
+
+-- 4 Создайте временное представление, продемонстрируйте время существования
+CREATE TEMP VIEW TempView AS SELECT * FROM PRODUCTS;
+
+SELECT * FROM TempView;
+
+-- 5 Создайте индексы, которые оптимизируют запросы 3.14, 3.16, 3.19, 3.20, 3.24, 3.35 из лабораторной работы 11. Продемонстрируйте план запроса до и после оптимизации
+-- 3.14. Индекс на столбце AMOUNT в таблице ORDERS может улучшить этот запрос.
+EXPLAIN QUERY PLAN SELECT DISTINCT REP, AMOUNT FROM ORDERS WHERE AMOUNT > 10000;
+
+CREATE INDEX idx_orders_amount ON ORDERS (AMOUNT);
+DROP INDEX idx_orders_amount;
+
+-- 3.16. Индекс на столбце PRICE в таблице PRODUCTS может улучшить этот запрос.
+EXPLAIN QUERY PLAN SELECT MFR_ID, PRODUCT_ID, DESCRIPTION, MAX(PRICE) FROM PRODUCTS GROUP BY MFR_ID;
+
+CREATE INDEX idx_products_price ON PRODUCTS (PRICE);
+DROP INDEX idx_products_price;
+
+-- 3.19. Индекс на столбце AGE в таблице SALESREPS может улучшить этот запрос.
+EXPLAIN QUERY PLAN SELECT * FROM SALESREPS S1 WHERE EXISTS (SELECT * FROM SALESREPS S2 WHERE S1.AGE = S2.AGE AND S1.EMPL_NUM <> S2.EMPL_NUM);
+
+CREATE INDEX idx_salesreps_age ON SALESREPS (AGE);
+DROP INDEX idx_salesreps_age;
+
+-- 3.20 Индекс на столбце PRICE в таблице PRODUCTS может улучшить этот запрос.
+EXPLAIN QUERY PLAN SELECT P.DESCRIPTION FROM PRODUCTS P JOIN ORDERS O ON P.PRODUCT_ID = O.PRODUCT JOIN CUSTOMERS C ON O.CUST = C.CUST_NUM WHERE C.COMPANY = 'First Corp.';
+
+--Этот индекс уже создан для запроса 3.16
+
+-- 3.24. Индексы на столбцах REP_OFFICE в таблице SALESREPS и AMOUNT в таблице ORDERS могут улучшить этот запрос.
+EXPLAIN QUERY PLAN SELECT S.REP_OFFICE, SUM(O.AMOUNT) 
+FROM ORDERS O
+JOIN SALESREPS S ON O.REP = S.EMPL_NUM
+GROUP BY S.REP_OFFICE 
+ORDER BY SUM(O.AMOUNT) DESC;
+
+CREATE INDEX idx_salesreps_rep_office ON SALESREPS (REP_OFFICE);
+-- Индекс на AMOUNT уже был создан для запроса 3.14
+
+DROP INDEX idx_salesreps_rep_office;
+
+-- 3.35. Индексы на столбцах CUST и ORDER_DATE в таблице ORDERS могут улучшить этот запрос.
+
+EXPLAIN QUERY PLAN SELECT C.* FROM CUSTOMERS C WHERE EXISTS (SELECT * FROM ORDERS WHERE CUST = C.CUST_NUM AND strftime('%Y', ORDER_DATE) = '2007') AND EXISTS (SELECT * FROM ORDERS WHERE CUST = C.CUST_NUM AND strftime('%Y', ORDER_DATE) = '2008');
+
+CREATE INDEX idx_orders_cust ON ORDERS (CUST);
+CREATE INDEX idx_orders_order_date ON ORDERS (ORDER_DATE);
+
+DROP INDEX idx_orders_cust;
+DROP INDEX idx_orders_order_date;
+
+-- 6 Создайте таблицу и триггер, который запишет дату изменения и предыдущие данные в таблицу AUDIT при изменении в таблице SALESREPS
+CREATE TABLE AUDIT (
+    EMPL_NUM INTEGER,
+    NAME TEXT,
+    AGE INTEGER,
+    REP_OFFICE INTEGER,
+    TITLE TEXT,
+    HIRE_DATE TEXT,
+    MGR INTEGER,
+    QUOTA REAL,
+    SALES REAL,
+    CHANGE_DATE TEXT
+);
+
+CREATE TRIGGER audit_trigger AFTER UPDATE ON SALESREPS
+FOR EACH ROW
+BEGIN
+    INSERT INTO AUDIT (EMPL_NUM, NAME, AGE, REP_OFFICE, TITLE, HIRE_DATE, MGR, QUOTA, SALES, CHANGE_DATE) 
+    VALUES (OLD.EMPL_NUM, OLD.NAME, OLD.AGE, OLD.REP_OFFICE, OLD.TITLE, OLD.HIRE_DATE, OLD.MANAGER, OLD.QUOTA, OLD.SALES, datetime('now'));
+END;
+
+select * from SALESREPS;
+UPDATE SALESREPS SET NAME = 'TEST1' WHERE AGE = '52';--ПОМЕНЯТЬ КОГДА ПОКАЗЫВАТЬ
+SELECT * FROM AUDIT;
+
+-- 7 Создайте триггер, который при добавлении данных в представление, созданное вами в п.1.2, записывает данные в таблицы SALESREPS и OFFICES
+CREATE TRIGGER empls_offices_trigger INSTEAD OF INSERT ON EmployeesAndOffices
+BEGIN
+
+INSERT INTO OFFICES (OFFICE, CITY, REGION, MGR, TARGET, SALES)
+  SELECT 28, NEW.CITY, NEW.REGION, 106, 888888, 777777;
+  
+  INSERT INTO SALESREPS (EMPL_NUM, NAME, AGE, REP_OFFICE, TITLE, HIRE_DATE, MANAGER, QUOTA, SALES)
+  SELECT 199, NEW.NAME, 35, 23, 'Sales Rep', date('now'), 106, 200000, 188000;
+END;
+
+INSERT INTO EmployeesAndOffices (NAME, CITY, REGION) VALUES ('Nikita eirjiwfn', 'Minsk dwof', 'Eastern');
+select * from OFFICES; 
+select * from SALESREPS;
+select * from EmployeesAndOffices;
+
+
+-- 8 Продемонстрируйте применение транзакций в SQLite: в одной транзакции добавьте заказ и пересчитайте поле SALES для соответствующего сотрудника
+begin EXCLUSIVE TRANSACTION;
+select sum(ORDERS.AMOUNT) from ORDERS where REP = 110;
+insert into ORDERS values(188039,'2008-01-30',2107,110,'ACI','4100Z',9,22500.00);
+select sum(ORDERS.AMOUNT) from ORDERS where REP = 110;
+commit;
+
+-- 9 Продемонстрируйте применение вложенных транзакций в SQLite: во внешней транзакции добавьте сотрудника, во внутренней транзакции – несколько его заказов
+BEGIN TRANSACTION A;
+	INSERT INTO SALESREPS VALUES (140,'Nikita Papko',49,22,'Sales Rep','2006-11-14',108,300000.00,186042.00);
+	BEGIN TRANSACTION B;
+		INSERT INTO ORDERS VALUES (124456, '2008-01-30', 2108, 120, 'ACI', '4100Z', 10, 23500.00);
+	COMMIT TRANSACTION B;
+COMMIT TRANSACTION A;
+select * from SALESREPS;
+
+-- 10 Продемонстрируйте применение точек сохранения
+BEGIN TRANSACTION;
+
+insert into ORDERS values(189939,'2024-04-16',2107,110,'ACI','4100Z',9,22500.00);
+
+select * FROM Orders where order_date = '2024-04-16';
+SAVEPOINT my_savepoint;
+insert into ORDERS values(180939,'2024-04-16',2107,110,'ACI','4100Z',9,22500.00);
+
+insert into ORDERS values(900039,'2024-04-16',2107,110,'ACI','4100Z',9,22500.00);
+
+ROLLBACK TO my_savepoint;
+
+COMMIT;
